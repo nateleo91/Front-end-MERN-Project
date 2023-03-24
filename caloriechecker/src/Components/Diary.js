@@ -1,12 +1,16 @@
 import React from 'react';
 import Title from '../Modules/Title';
-// import Css from './homeCss'
+import FoodCalendar from './FoodCalendar';
+
 
 function Diary() {
   return (
     <div>
       <Title />
-    </div>
+      <FoodCalendar />
+      
+      
+     </div>
   );
 }
 
