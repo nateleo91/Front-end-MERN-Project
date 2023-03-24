@@ -1,6 +1,6 @@
 import React from 'react';
 import Title from '../Modules/Title';
-import FoodCalendar from './FoodCalendar';
+import FoodCalendar from '../Modules/Diary/Calendar';
 
 
 function Diary() {
@@ -8,8 +8,6 @@ function Diary() {
     <div>
       <Title />
       <FoodCalendar />
-      
-      
      </div>
   );
 }
