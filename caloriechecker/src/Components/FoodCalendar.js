@@ -17,7 +17,13 @@ function FoodCalendar() {
       setYear(parseInt(event.target.value));
     };
   
-   
+    const date = new Date(year, month - 1, day);
+    const dateString = date.toLocaleDateString("en-US", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
 }
 
 export default FoodCalendar; 
