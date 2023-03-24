@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function SearchResult() {
-  const [searchResult, setSearchResult] = useState('');
+  const [searchResult] = useState('');
 
   return (
     <div>
