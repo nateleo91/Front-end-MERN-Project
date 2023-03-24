@@ -54,16 +54,30 @@ function FoodCalendar() {
           style={{ display: "inline-block", marginLeft: "10px" }}
         />
       </div>
-    
-    
-    
+      <div>
+        <label htmlFor="year" style={{ display: "inline-block" }}>Year: </label>
+        <input
+          type="number"
+          id="year"
+          name="year"
+          min="1900"
+          max="2100"
+          value={year}
+          onChange={handleYearChange}
+          style={{ display: "inline-block", marginLeft: "10px" }}
+        />
+      </div>
     </div>
-
-
-
-
-
-);
+  );
 }
 
-export default FoodCalendar; 
+export default FoodCalendar;
+    
+    
+    
+    
+
+
+
+
+
