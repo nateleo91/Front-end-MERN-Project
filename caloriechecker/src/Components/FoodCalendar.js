@@ -24,6 +24,27 @@ function FoodCalendar() {
       month: "long",
       day: "numeric",
     });
+    return (
+       
+    <div>
+    <h1>Your Food Diary For: {dateString}</h1>
+    <div>
+      <label htmlFor="day" style={{ display: "inline-block" }}>Day: </label>
+      <input
+        type="number"
+        id="day"
+        name="day"
+        min="1"
+        max="31"
+        value={day}
+        onChange={handleDayChange}
+        style={{ display: "inline-block", marginLeft: "10px" }}
+      />        
+    </div>
+    </div>
+
+
+);
 }
 
 export default FoodCalendar; 
