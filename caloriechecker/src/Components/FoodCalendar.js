@@ -1,20 +1,23 @@
 import React, { useState } from "react";
 
 function FoodCalendar() {
-    const date = new Date();
-    const dateString = date.toLocaleDateString("en-US", {
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
+    const [day, setDay] = useState(new Date().getDate());
+    const [month, setMonth] = useState(new Date().getMonth() + 1);
+    const [year, setYear] = useState(new Date().getFullYear());
   
-    return (
-      <div>
-        <h1>Your Food Diary For: {dateString}</h1>
-      </div>
-    );
-  }
+    const handleDayChange = (event) => {
+      setDay(parseInt(event.target.value));
+    };
   
-  export default FoodCalendar;
+    const handleMonthChange = (event) => {
+      setMonth(parseInt(event.target.value));
+    };
   
+    const handleYearChange = (event) => {
+      setYear(parseInt(event.target.value));
+    };
+  
+   
+}
+
+export default FoodCalendar; 
