@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.title {
+  text-align: center;
+  background-color: rgba(21, 100, 129, 0.195);
+  padding-top: 0%;
+  margin-top: -3%;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.buttons {
+  background-color: rgba(2, 97, 132, 0.195);
+}
+
+.button {
+  border: none;
+  outline: none;
+  background-color: rgba(205, 216, 223, 0.195);
+  font-size: 20px;
+  font-style: normal;
+  font-style: oblique;
+}

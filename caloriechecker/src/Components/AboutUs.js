@@ -1,11 +1,13 @@
 import React from 'react';
 import Title from '../Modules/Title';
-// import Css from './homeCss'
+import Tabs from '../Modules/Tabs';
+import "../index.css"
 
 function About() {
   return (
     <div>
       <Title />
+      <Tabs />
     </div>
   );
 }
