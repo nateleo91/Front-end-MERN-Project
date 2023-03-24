@@ -41,7 +41,26 @@ function FoodCalendar() {
         style={{ display: "inline-block", marginLeft: "10px" }}
       />        
     </div>
+    <div>
+        <label htmlFor="month" style={{ display: "inline-block" }}>Month: </label>
+        <input
+          type="number"
+          id="month"
+          name="month"
+          min="1"
+          max="12"
+          value={month}
+          onChange={handleMonthChange}
+          style={{ display: "inline-block", marginLeft: "10px" }}
+        />
+      </div>
+    
+    
+    
     </div>
+
+
+
 
 
 );
