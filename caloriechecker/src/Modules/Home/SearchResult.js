@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 function SearchResult({ searchResult }) {
   return (
-    <div className="searchResult" id="wrap">
+    <div className="searchResult">
       {searchResult && (
         <div>
           {searchResult.map((food) => (

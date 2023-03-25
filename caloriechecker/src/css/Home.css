@@ -19,6 +19,19 @@ body {
     font-size: 100.01%;
     min-height: 100%;
     text-align: left;
+    margin: auto;
+}
+
+#header, #content, #footer {
+    clear: both;
+    float: left;
+    display: inline;
+    position: relative;
+    width: 100%;
+}
+
+#content {
+    padding: 20px 0 4em;
 }
 
 #wrap {
@@ -141,10 +154,70 @@ ul {
     text-align: left;
 }
 
-#number-input {
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
 
+ul {
+    list-style: none;
+    list-style-position: outside;
+}
+
+.searchBar {
+    display: inline;
+    font-weight: bold;
+    margin-bottom: 5px;
+    cursor: default;
+    text-align: -webkit-match-parent;
+    list-style: none;
+    list-style-position: outside;
+}
+
+#number-input {
+    width: 40px;
+    color: #444;
+    border: none;
+    border-bottom: 1px solid #f1f1f1;
+    border-right: 1px solid #f1f1f1;
+    margin: 3px 0;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    line-height: normal;
+    vertical-align: middle;
 }
 
 #dropdown-menu {
+    width: 240px;
+    color: #444;
+    border: none;
+    border-bottom: 1px solid #f1f1f1;
+    border-right: 1px solid #f1f1f1;
+    margin: 3px 0;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    line-height: normal;
+    vertical-align: middle;
+    font-style: inherit;
+    font-weight: inherit;
+    outline: 0;
+    overflow: visible !important;
+}
 
+.nutritionInfo{
+    border-bottom: 2px solid #000;
+    border-top: 2px solid #000;
+    margin-bottom: 5px;
+    margin: 0 0 1em;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-color: grey;
+    color: #222;
+    line-height: 1.5em;
 }
