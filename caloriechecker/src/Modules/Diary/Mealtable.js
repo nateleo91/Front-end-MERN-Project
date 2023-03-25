@@ -60,4 +60,20 @@ const MealTable = () => {
         <input id="sugar" name="sugar" type="number" value={sugar} onChange={(event) => setSugar(event.target.value)} />
         <button type="submit">Add Food</button>
       </form>
-      
+      <table>
+        <thead>
+          <tr>
+            <th>Meal</th>
+            <th>Food Item</th>
+            <th>Calories</th>
+            
+
+
+            <th>Carbs</th>
+            <th>Fat</th>
+            <th>Protein</th>
+            <th>Sodium</th>
+            <th>Sugar</th>
+          </tr>
+        </thead>
+        
