@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
 
-function SearchBar() {
+function SearchBar({ handleSearchQuery }) {
   const [searchText, setSearchText] = useState('');
 
   const handleSearchTextChange = (event) => {
     setSearchText(event.target.value);
   };
 
+  const handleSearchButtonClick = () => {
+    handleSearchQuery(searchText);
+  };
+
   return (
-    <div>
+    <div className="searchBar">
       <h2>Search food database by name:</h2>
-      <input type="text" value={searchText} onChange={handleSearchTextChange} />
+      <input type="text" className="searchfor" value={searchText} onChange={handleSearchTextChange} />
+      <button onClick={handleSearchButtonClick} className="searchButton">Search</button>
+      <h2 className="resultsTitle">Matching Foods:</h2>
     </div>
   );
 }
