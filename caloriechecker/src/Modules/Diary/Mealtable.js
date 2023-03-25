@@ -33,4 +33,15 @@ const MealTable = () => {
     setSugar("");
   };
 
- 
+  return (
+    <div>
+      <h1>Meal Table</h1>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="meal">Meal:</label>
+        <select id="meal" name="meal" value={meal} onChange={(event) => setMeal(event.target.value)}>
+          <option value="breakfast">Breakfast</option>
+          <option value="lunch">Lunch</option>
+          <option value="dinner">Dinner</option>
+          <option value="snacks">Snacks</option>
+        </select>
+       
