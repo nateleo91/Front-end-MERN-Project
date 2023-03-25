@@ -2,15 +2,16 @@ import React from "react";
 import Title from "../Modules/Title";
 import RegisterForm from "../Modules/Login&register/RegisterForm";
 
-function Register() {
-    return (
+function Register(props) {
+  const handleInput = props.handleInput;
+  const handleSignUp = props.handleSignUp;
 
-        <div>
-            <Title />
-            <RegisterForm />
-        </div>
-
-    )   
+  return (
+    <div>
+      <Title />
+      <RegisterForm handleInput={handleInput} handleSignUp={handleSignUp} />
+    </div>
+  );
 }
 
-export default Register
+export default Register;
