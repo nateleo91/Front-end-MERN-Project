@@ -11,3 +11,26 @@ const MealTable = () => {
   const [sugar, setSugar] = useState("");
   const [mealItems, setMealItems] = useState([]);
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const newMealItem = {
+      meal: meal,
+      foodItem: foodItem,
+      calories: calories,
+      carbs: carbs,
+      fat: fat,
+      protein: protein,
+      sodium: sodium,
+      sugar: sugar,
+    };
+    setMealItems([...mealItems, newMealItem]);
+    setFoodItem("");
+    setCalories("");
+    setCarbs("");
+    setFat("");
+    setProtein("");
+    setSodium("");
+    setSugar("");
+  };
+
+ 
