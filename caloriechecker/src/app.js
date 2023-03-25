@@ -5,6 +5,7 @@ import AboutUs from './Components/AboutUs'
 import Register from './Components/Register'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
+import axios from 'axios'
 
 function App() {
 
@@ -18,7 +19,18 @@ function App() {
     setUser[e.target.name] = e.target.value
   }
   function handleSignUp(e) {
-
+    console.log(user.email, user.password)
+    e.preventDefault()
+    axios.post("http://localhost:4000/users/signup", {
+      //Change url
+      email: user.email,
+      password: user.password
+    })
+    .then( res => {
+      localStorage.token = res.data.token
+      setUser({ isLoggedIn: true })
+    })
+    .catch(error => console.log(error))
   }
 
   return (
