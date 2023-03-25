@@ -13,4 +13,16 @@ const MealTable = () => {
       case "breakfast":
         setBreakfast([...breakfast, newFood]);
         break;
-      
+      case "lunch":
+        setLunch([...lunch, newFood]);
+        break;
+      case "dinner":
+        setDinner([...dinner, newFood]);
+        break;
+      default:
+        break;
+    }
+    setNewFood("");
+  };
+
+  
