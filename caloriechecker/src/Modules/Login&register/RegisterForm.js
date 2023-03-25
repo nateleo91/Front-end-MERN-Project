@@ -1,10 +1,8 @@
 import React from "react";
 
 function RegisterForm() {
-
-    
     return(
-        <div>
+      <div>
         <h2>Sign Up</h2>
 
         <form>
