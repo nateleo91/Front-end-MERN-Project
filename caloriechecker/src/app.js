@@ -16,10 +16,12 @@ function App() {
   })
 
   function handleInput(e) {
-    setUser[e.target.name] = e.target.value
+    setUser({
+      [e.target.name]: e.target.value
+    })
   }
   function handleSignUp(e) {
-    console.log(user.email, user.password)
+    
     e.preventDefault()
     axios.post("http://localhost:4000/users/signup", {
       //Change url
