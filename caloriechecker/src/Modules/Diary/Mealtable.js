@@ -1,103 +1,98 @@
 import React, { useState } from "react";
-import { Table, Button, Form } from "react-bootstrap";
 
 const MealTable = () => {
-  const [breakfast, setBreakfast] = useState([]);
-  const [lunch, setLunch] = useState([]);
-  const [dinner, setDinner] = useState([]);
-  const [newFood, setNewFood] = useState("");
+  const [meal, setMeal] = useState("breakfast");
+  const [foodItem, setFoodItem] = useState("");
+  const [calories, setCalories] = useState("");
+  const [carbs, setCarbs] = useState("");
+  const [fat, setFat] = useState("");
+  const [protein, setProtein] = useState("");
+  const [sodium, setSodium] = useState("");
+  const [sugar, setSugar] = useState("");
+  const [mealItems, setMealItems] = useState([]);
 
-  const handleAddFood = (meal) => {
-    if (newFood.trim() === "") return;
-    switch (meal) {
-      case "breakfast":
-        setBreakfast([...breakfast, newFood]);
-        break;
-      case "lunch":
-        setLunch([...lunch, newFood]);
-        break;
-      case "dinner":
-        setDinner([...dinner, newFood]);
-        break;
-      default:
-        break;
-    }
-    setNewFood("");
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const newMealItem = {
+      meal: meal,
+      foodItem: foodItem,
+      calories: calories,
+      carbs: carbs,
+      fat: fat,
+      protein: protein,
+      sodium: sodium,
+      sugar: sugar,
+    };
+    setMealItems([...mealItems, newMealItem]);
+    setFoodItem("");
+    setCalories("");
+    setCarbs("");
+    setFat("");
+    setProtein("");
+    setSodium("");
+    setSugar("");
   };
 
-return (
-  <div>
-    <h2>My Meal Table</h2>
-    <Table striped bordered hover>
-      <thead>
-        <tr>
-          <th>Meal</th>
-          <th>Food</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Breakfast</td>
-          <td>
-            {breakfast.map((food, index) => (
-              <div key={index}>{food}</div>
-            ))}
-            <Form>
-              <Form.Control type="text" placeholder="Add food" value={newFood} onChange={(e) => setNewFood(e.target.value)}/>
-            </Form>
-            <Button variant="primary" onClick={() => handleAddFood("breakfast")}>
-              Add
-            </Button>
-          </td>
-        </tr>
-        <tr>
-          <td>Lunch</td>
-          <td>
-            {lunch.map((food, index) => (
-              <div key={index}>{food}</div>
-            ))}
-            <Form>
-              <Form.Control
-                type="text"
-                placeholder="Add food"
-                value={newFood}
-                onChange={(e) => setNewFood(e.target.value)}
-              />
-            </Form>
-            <Button
-              variant="primary"
-              onClick={() => handleAddFood("lunch")}
-            >
-              Add
-            </Button>
-          </td>
-        </tr>
-        <tr>
-          <td>Dinner</td>
-          <td>
-            {dinner.map((food, index) => (
-              <div key={index}>{food}</div>
-            ))}
-            <Form>
-              <Form.Control
-                type="text"
-                placeholder="Add food"
-                value={newFood}
-                onChange={(e) => setNewFood(e.target.value)}
-              />
-            </Form>
-            <Button
-              variant="primary"
-              onClick={() => handleAddFood("dinner")}
-            >
-              Add
-            </Button>
-          </td>
-        </tr>
-      </tbody>
-    </Table>
-  </div>
-);
+  return (
+    <div>
+      <h1>Meal Table</h1>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="meal">Meal:</label>
+        <select id="meal" name="meal" value={meal} onChange={(event) => setMeal(event.target.value)}>
+          <option value="breakfast">Breakfast</option>
+          <option value="lunch">Lunch</option>
+          <option value="dinner">Dinner</option>
+          <option value="snacks">Snacks</option>
+        </select>
+        <label htmlFor="foodItem">Food Item:</label>
+        <input id="foodItem" name="foodItem" type="text" value={foodItem} onChange={(event) => setFoodItem(event.target.value)} />
+        <label htmlFor="calories">Calories:</label>
+        <input id="calories" name="calories" type="number" value={calories} onChange={(event) => setCalories(event.target.value)} />
+        <label htmlFor="carbs">Carbs:</label>
+        <input id="carbs" name="carbs" type="number" value={carbs} onChange={(event) => setCarbs(event.target.value)} />
+        <label htmlFor="fat">Fat:</label>
+        <input id="fat" name="fat" type="number" value={fat} onChange={(event) => setFat(event.target.value)} />
+        <label htmlFor="protein">Protein:</label>
+        <input id="protein" name="protein" type="number" value={protein} onChange={(event) => setProtein(event.target.value)} />
+        <label htmlFor="sodium">Sodium:</label>
+        <input id="sodium" name="sodium" type="number" value={sodium} onChange={(event) => setSodium(event.target.value)} />
+        <label htmlFor="sugar">Sugar:</label>
+        <input id="sugar" name="sugar" type="number" value={sugar} onChange={(event) => setSugar(event.target.value)} />
+        <button type="submit">Add Food</button>
+      </form>
+      <table>
+        <thead>
+          <tr>
+            <th>Meal</th>
+            <th>Food Item</th>
+            <th>Calories</th>
+            
+
+
+            <th>Carbs</th>
+            <th>Fat</th>
+            <th>Protein</th>
+            <th>Sodium</th>
+            <th>Sugar</th>
+          </tr>
+        </thead>
+        <tbody>
+          {mealItems.map((mealItem, index) => (
+            <tr key={index}>
+              <td>{mealItem.meal}</td>
+              <td>{mealItem.foodItem}</td>
+              <td>{mealItem.calories}</td>
+              <td>{mealItem.carbs}</td>
+              <td>{mealItem.fat}</td>
+              <td>{mealItem.protein}</td>
+              <td>{mealItem.sodium}</td>
+              <td>{mealItem.sugar}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
 };
 
-  export default MealTable
+export default MealTable;
