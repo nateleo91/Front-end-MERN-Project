@@ -6,6 +6,11 @@ const MealTable = () => {
   const [lunch, setLunch] = useState([]);
   const [dinner, setDinner] = useState([]);
   const [newFood, setNewFood] = useState("");
-  
 
-  
+  const handleAddFood = (meal) => {
+    if (newFood.trim() === "") return;
+    switch (meal) {
+      case "breakfast":
+        setBreakfast([...breakfast, newFood]);
+        break;
+      
