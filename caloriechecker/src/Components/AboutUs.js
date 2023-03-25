@@ -1,7 +1,7 @@
 import React from 'react';
 import Title from '../Modules/Title';
 import Tabs from '../Modules/Tabs';
-import "../index.css"
+import "../css/AboutUs.css"
 
 function About() {
   return (

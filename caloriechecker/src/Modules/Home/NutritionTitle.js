@@ -3,7 +3,7 @@ import React from 'react';
 function NutritionFacts() {
   
   return (
-    <div>
+    <div id="wrap">
       <h2 className="nutritionTitle">Nutrition Facts</h2>
       <h1>name</h1>
       <button>Learn More</button>

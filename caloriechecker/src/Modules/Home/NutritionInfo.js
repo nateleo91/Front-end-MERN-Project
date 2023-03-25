@@ -3,7 +3,7 @@ import React from 'react';
 function NutritionInfo() {
 
     return (
-        <div>
+        <div id="wrap">
             <ul>
                 <li>Calories</li>
                 <li>Total Fat</li>

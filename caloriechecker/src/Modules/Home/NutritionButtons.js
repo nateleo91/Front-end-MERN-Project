@@ -13,11 +13,10 @@ function NutritionButtons() {
   }
 
   return (
-    <div>
-      <label htmlFor="number-input">Enter a number:</label>
+    <div id="wrap">
+      <label htmlFor="number-input" className="servings">Servings:</label>
       <input type="number" step="0.01" id="number-input" value={value} onChange={handleInputChange} />
 
-      <label htmlFor="dropdown-menu">Select an option:</label>
       <select id="dropdown-menu" value={selectedOption} onChange={handleSelectChange}>
         <option value="option1">----------</option>
         <option value="option2">Option 2</option>

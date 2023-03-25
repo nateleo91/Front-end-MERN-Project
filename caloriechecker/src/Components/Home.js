@@ -6,7 +6,7 @@ import SearchResult from '../Modules/Home/SearchResult';
 import NutritionTitle from '../Modules/Home/NutritionTitle';
 import NutritionButtons from '../Modules/Home/NutritionButtons';
 import NutritionInfo from '../Modules/Home/NutritionInfo';
-import "../index.css"
+import '../css/Home.css'
 
 function Home() {
   return (

@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 
-function SearchResult() {
-  const [searchResult] = useState('');
-
+function SearchResult({ searchResult }) {
   return (
-    <div>
-        <h2>Matching Foods:</h2>
+    <div className="searchResult" id="wrap">
       {searchResult && (
         <div>
-          <p>You searched for: {searchResult}</p>
+          {searchResult.map((food) => (
+            <div key={food.brand_type}>
+              <p>Food ID: {food.food_id}</p>
+            </div>
+          ))}
         </div>
       )}
     </div>

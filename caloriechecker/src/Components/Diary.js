@@ -2,7 +2,7 @@ import React from 'react';
 import Title from '../Modules/Title';
 import Tabs from '../Modules/Tabs';
 import FoodCalendar from '../Modules/Diary/Calendar';
-import "../index.css"
+import "../css/Diary.css"
 
 
 function Diary() {
