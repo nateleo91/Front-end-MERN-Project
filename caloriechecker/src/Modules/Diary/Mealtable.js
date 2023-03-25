@@ -76,4 +76,23 @@ const MealTable = () => {
             <th>Sugar</th>
           </tr>
         </thead>
-        
+        <tbody>
+          {mealItems.map((mealItem, index) => (
+            <tr key={index}>
+              <td>{mealItem.meal}</td>
+              <td>{mealItem.foodItem}</td>
+              <td>{mealItem.calories}</td>
+              <td>{mealItem.carbs}</td>
+              <td>{mealItem.fat}</td>
+              <td>{mealItem.protein}</td>
+              <td>{mealItem.sodium}</td>
+              <td>{mealItem.sugar}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+export default MealTable;
