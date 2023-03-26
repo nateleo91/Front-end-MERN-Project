@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import SearchBar from './SearchBar';
+import SearchResult from './SearchResult';
 
 function NutritionFacts() {
   const [value, setValue] = useState('');
   const [selectedOption, setSelectedOption] = useState('option1');
+  const [searchResult, setSearchResult] = useState([]);
 
   function handleInputChange(event) {
     setValue(event.target.value);
@@ -11,6 +14,13 @@ function NutritionFacts() {
   function handleSelectChange(event) {
     setSelectedOption(event.target.value);
   }
+
+  function handleSearchQuery(query) {
+    // Make an API call to get the search result based on the query
+    // Store the result in the searchResult state variable
+    setSearchResult(searchResult);
+  }
+
   
   return (
     <div id="content">
@@ -18,15 +28,29 @@ function NutritionFacts() {
       <h1>name</h1>
       <button>Learn More</button>
     <div>
-    <label htmlFor="number-input" className="servings">Servings:</label>
-    <input type="number" step="0.01" id="number-input" value={value} onChange={handleInputChange} />
+      <SearchBar handleSearchQuery={handleSearchQuery} />
+        <label htmlFor="number-input" className="servings">
+          Servings:
+        </label>
+        <input
+          type="number"
+          step="0.01"
+          id="number-input"
+          value={value}
+          onChange={handleInputChange}
+        />
 
-    <select id="dropdown-menu" value={selectedOption} onChange={handleSelectChange}>
-      <option value="option1">----------</option>
-      <option value="option2">Option 2</option>
-      <option value="option3">Option 3</option>
-    </select>
-    <div className="nutritionInfo">
+        <select
+          id="dropdown-menu"
+          value={selectedOption}
+          onChange={handleSelectChange}
+        >
+          <option value="option1">----------</option>
+          <option value="option2">Option 2</option>
+          <option value="option3">Option 3</option>
+        </select>
+
+        <div className="nutritionInfo">
             <table>
             <tbody>
             <tr>
