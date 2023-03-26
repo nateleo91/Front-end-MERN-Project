@@ -40,7 +40,7 @@ function App() {
   async function handleLogIn(e) {
     console.log(user.email, user.password)
     e.preventDefault()
-    axios.post("http://localhost:4000/users/login",{
+    await axios.post("http://localhost:4000/users/login",{
       //change url on deployment
       email: user.email,
       password: user.password
@@ -61,7 +61,7 @@ function App() {
         <Route path="/Create" element={<Create />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/Register" element={<Register handleInput={handleInput} handleSignUp={handleSignUp}/>} />
-        <Route path="/Login" element={<Login handleInput={handleInput} handleLogin={handleLogIn} />} />
+        <Route path="/Login" element={<Login handleInput={handleInput} handleLogIn={handleLogIn} />} />
       </Routes>
     </Router>
   );

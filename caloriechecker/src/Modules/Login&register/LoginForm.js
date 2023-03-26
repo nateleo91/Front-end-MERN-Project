@@ -3,6 +3,7 @@ import React from "react";
 function LoginForm(props) {
   const handleInput = props.handleInput;
   const handleLogIn = props.handleLogIn;
+
   return (
     <div>
       <h2>Log In</h2>
