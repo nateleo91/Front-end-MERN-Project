@@ -1,0 +1,23 @@
+
+
+.container {
+    display: flex;
+    height: 200px;
+    width: 400px;
+    border: 2px solid blue;
+}
+
+.profileImg {
+    flex: 1;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.profileTxt {
+    flex: 2;
+    padding: 20px;
+}
