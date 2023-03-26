@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const MealTable = () => {
   const [meal, setMeal] = useState("breakfast");
@@ -10,6 +10,20 @@ const MealTable = () => {
   const [sodium, setSodium] = useState("");
   const [sugar, setSugar] = useState("");
   const [mealItems, setMealItems] = useState([]);
+  const [foodData, setFoodData] = useState(null);
+
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await fetch(
+        "https://api.edamam.com/api/food-database/v2/parser?nutrition-type=logging&ingr=chicken%20breast&app_id=YOUR_APP_ID&app_key=YOUR_APP_KEY"
+      );
+      const data = await result.json();
+      setFoodData(data);
+    };
+    fetchData();
+  }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -66,9 +80,6 @@ const MealTable = () => {
             <th>Meal</th>
             <th>Food Item</th>
             <th>Calories</th>
-            
-
-
             <th>Carbs</th>
             <th>Fat</th>
             <th>Protein</th>
