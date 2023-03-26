@@ -11,3 +11,10 @@ label {
   margin-right: 7px;
 }
 
+form {
+  display: grid;
+  grid-template-columns: 0.8fr 2fr;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+}
