@@ -25,3 +25,12 @@ class MealTable extends React.Component {
           sodium: 0,
           sugar: 0
         },
+        {
+          mealType: 'Dinner',
+          calories: 0,
+          carbs: 0,
+          fat: 0,
+          protein: 0,
+          sodium: 0,
+          sugar: 0
+        },
