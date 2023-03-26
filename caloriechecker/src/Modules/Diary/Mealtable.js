@@ -118,3 +118,40 @@ render() {
             <th>Tools</th>
           </tr>
         </thead>
+        <tbody>
+            {this.state.meals.map(this.renderMealRow)}
+            <tr>
+              <td>Totals:</td>
+              <td>{totals.calories}</td>
+              <td>{totals.carbs}</td>
+              <td>{totals.fat}</td>
+              <td>{totals.protein}</td>å
+              <td>{totals.sodium}</td>
+              <td>{totals.sugar}</td>
+            </tr>
+            <tr>
+              <td>Your Daily Goal:</td>
+              <td>2,770 kcal</td>
+              <td>346 g</td>
+              <td>92 g</td>
+              <td>139 g</td>
+              <td>2,300 mg</td>
+              <td>104g</td>
+            </tr>
+            <tr>
+              <td>Remaining:</td>
+              <td>{0 - totals.calories} kcal</td>
+              <td>{0 - totals.carbs} g</td>
+              <td>{0 - totals.fat} g</td>
+              <td>{0 - totals.protein} g</td>
+              <td>{0 - totals.sodium} mg</td>
+              <td>{0 - totals.sugar}</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+}
+
+export default MealTable
