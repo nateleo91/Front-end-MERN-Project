@@ -17,14 +17,15 @@ function App() {
 
   function handleInput(e) {
     setUser({
+      // spread operator needed to save input of previous state 
+      ...user,
       [e.target.name]: e.target.value
     })
   }
-  function handleSignUp(e) {
-    
+  async function handleSignUp(e) {
     e.preventDefault()
-    axios.post("http://localhost:4000/users/signup", {
-      //Change url
+    await axios.post("http://localhost:4000/users/signup", {
+      //Change url on deployment
       email: user.email,
       password: user.password
     })
