@@ -50,4 +50,23 @@ class MealTable extends React.Component {
     const handleAddFoodClick = () => {
       // Open a popup when Add Food is clicked
       const popupWindow = window.open("path/to/popup.html", "Add Food", "width=400,height=500");
-    
+       // Fetch data from the food database API
+       fetch('https://food-database-api.com/api/foods')
+       .then(response => response.json())
+       .then(data => {
+         // Display the fetched data in the popup
+         const popupContent = `
+           <h2>Select food to add:</h2>
+           <ul>
+             ${data.map(food => `<li>${food.name} (${food.calories} kcal)</li>`).join('')}
+           </ul>
+         `;
+         popupWindow.document.body.innerHTML = popupContent;
+       })
+       .catch(error => {
+         console.error('Error fetching food data:', error);
+         popupWindow.close();
+       });
+   };
+   
+ 
