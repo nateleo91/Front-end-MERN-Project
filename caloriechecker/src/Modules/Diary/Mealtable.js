@@ -46,3 +46,8 @@ class MealTable extends React.Component {
       ]
     };
   }
+  renderMealRow(meal) {
+    const handleAddFoodClick = () => {
+      // Open a popup when Add Food is clicked
+      const popupWindow = window.open("path/to/popup.html", "Add Food", "width=400,height=500");
+    
