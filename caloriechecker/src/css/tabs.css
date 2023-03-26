@@ -1,15 +1,28 @@
 .buttons {
     background-color: rgba(2, 97, 132, 0.195);
+    display: flex;
+    justify-content: center;
     text-align: center;
+
   }
   
 .button {
     border: none;
     outline: none;
     background-color: rgba(205, 216, 223, 0.195);
-    font-size: 20px;
+    font-size: 15px;
     font-style: normal;
     font-style: oblique;
+    margin: 0 10px;
+  }
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1;
+
   }
 
 .sign {
@@ -20,4 +33,5 @@
     font: inherit;
     text-decoration: underline;
     cursor: pointer;
+    margin-left: auto;
   }
