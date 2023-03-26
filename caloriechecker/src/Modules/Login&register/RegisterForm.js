@@ -3,7 +3,7 @@ import React from "react";
 function RegisterForm(props) {
   const handleInput = props.handleInput;
   const handleSignUp = props.handleSignUp;
-  
+
   return (
     <div>
       <h2>Sign Up</h2>
