@@ -82,4 +82,21 @@ class MealTable extends React.Component {
     </tr>
   );
 }
- 
+calculateTotals() {
+  let totals = {
+    calories: 0,
+    carbs: 0,
+    fat: 0,
+    protein: 0,
+    sodium: 0,
+    sugar: 0
+  };
+  for (let meal of this.state.meals) {
+    for (let nutrient in meal) {
+      if (nutrient !== 'mealType') {
+        totals[nutrient] += meal[nutrient];
+      }
+    }
+  }
+  return totals;
+}
