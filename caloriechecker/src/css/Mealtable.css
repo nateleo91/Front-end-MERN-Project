@@ -7,3 +7,8 @@ table {
   border-radius: 6px;
 }
 
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
