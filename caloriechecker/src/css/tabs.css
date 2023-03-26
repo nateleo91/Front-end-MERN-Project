@@ -3,11 +3,21 @@
     text-align: center;
   }
   
-  .button {
+.button {
     border: none;
     outline: none;
     background-color: rgba(205, 216, 223, 0.195);
     font-size: 20px;
     font-style: normal;
     font-style: oblique;
+  }
+
+.sign {
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font: inherit;
+    text-decoration: underline;
+    cursor: pointer;
   }
