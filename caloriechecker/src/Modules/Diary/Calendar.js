@@ -9,4 +9,11 @@ function FoodCalendar() {
     setSelectedDate(date);
   };
 
- 
+  const dateString = selectedDate.toLocaleDateString("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
+  
