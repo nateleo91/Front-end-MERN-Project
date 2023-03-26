@@ -25,4 +25,24 @@ function Tabs() {
     // handle sign-up form submission here
   };
 
- 
+  return (
+    <div className="buttons">
+      <div className="button-group">
+        <button className="button" onClick={() => navigate('/diary')}>
+          Diary
+        </button>
+        |
+        <button className="button" onClick={() => navigate('/create')}>
+          Create
+        </button>
+        |
+        <button className="button" onClick={() => navigate('/AboutUs')}>
+          AboutUs
+        </button>
+
+        <Button className='sign' variant="primary" onClick={handleShowModal}>
+          SignIn/Sign-up
+        </Button>
+      </div>
+
+   
