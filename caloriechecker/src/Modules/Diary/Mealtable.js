@@ -100,3 +100,21 @@ calculateTotals() {
   }
   return totals;
 }
+render() {
+  let totals = this.calculateTotals();
+  return (
+    <div>
+      <h1>Meal Table</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Meal Type</th>
+            <th>Calories (kcal)</th>
+            <th>Carbs (g)</th>
+            <th>Fat (g)</th>
+            <th>Protein (g)</th>
+            <th>Sodium (mg)</th>
+            <th>Sugar (g)</th>
+            <th>Tools</th>
+          </tr>
+        </thead>
