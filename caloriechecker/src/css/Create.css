@@ -18,3 +18,12 @@ form {
   align-items: center;
   padding: 10px;
 }
+button {
+  background-color: blue;
+  color: white;
+  padding: 5px 12px;
+  border: 0;
+  font-size: 14px;
+  margin-top: 5px;
+  border-radius: 3px;
+}
