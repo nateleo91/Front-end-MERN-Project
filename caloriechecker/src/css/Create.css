@@ -5,3 +5,9 @@ input[type='number'] {
   border-radius: 3px;
 }
 
+label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 7px;
+}
+
