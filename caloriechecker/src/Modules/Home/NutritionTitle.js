@@ -25,8 +25,8 @@ function NutritionFacts() {
   return (
     <div id="content">
       <h2 className="nutritionTitle">Nutrition Facts</h2>
-      <h1>name</h1>
-      <button>Learn More</button>
+      <h1 className="searchName">NAME</h1>
+      <button className="learnMore">Learn More</button>
     <div>
       <SearchBar handleSearchQuery={handleSearchQuery} />
         <label htmlFor="number-input" className="servings">
