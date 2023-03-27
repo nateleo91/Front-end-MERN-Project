@@ -1,0 +1,30 @@
+[
+    {
+        "image_src": "../../public/images/Nate_uniform.jpeg",
+        "name": "Nate Leonard",
+        "bio": "Just a dude from Pennsylvania who likes to code and eat Chocolate.  It is Palmer Chocolate Country up here you know!",
+        "linkedin": "https://www.linkedin.com/in/nathen-leonard/",
+        "github": "https://github.com/nateleo91"
+    },
+    {
+        "image_src": "../../public/images/Nate_uniform.jpeg",
+        "name": "Nate Leonard",
+        "bio": "Just a dude from Pennsylvania who likes to code and eat Chocolate.  It is Palmer Chocolate Country up here you know!",
+        "linkedin": "https://www.linkedin.com/in/jonnygrobstein/",
+        "github": "https://github.com/jonnygrobstein" 
+    },
+    {
+        "image_src": "../../public/images/Nate_uniform.jpeg",
+        "name": "Nate Leonard",
+        "bio": "Just a dude from Pennsylvania who likes to code and eat Chocolate.  It is Palmer Chocolate Country up here you know!",
+        "linkedin": "https://www.linkedin.com/in/sharnell-graham-627932262/",
+        "github": "https://github.com/SharnellGraham" 
+    },
+    {
+        "image_src": "../../public/images/Nate_uniform.jpeg",
+        "name": "Nate Leonard",
+        "bio": "Just a dude from Pennsylvania who likes to code and eat Chocolate.  It is Palmer Chocolate Country up here you know!",
+        "linkedin": "https://www.linkedin.com/in/jose-padilla-978ab5146/",
+        "github": "https://github.com/JpadillaCoding" 
+    }
+]
