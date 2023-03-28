@@ -4,12 +4,12 @@ function SearchResult({ searchResult }) {
   
   return (
     <div className="searchResult">
-      {searchResult && searchResult.data && (
+      {searchResult.data && (
         <div>
           {
           /* searchResult.data[0].food_name */
           searchResult.data.map((food) => (
-            <div key={food.brand_type}>
+            <div key={food._id}>
               <p>Food name: {food.food_name}</p>
             </div>
           ))}
