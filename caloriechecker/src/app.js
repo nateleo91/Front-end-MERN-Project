@@ -55,10 +55,6 @@ function App() {
     .catch(error => console.log(error))
   }
 
-
-function App() {
-  
-
   return (
     <Router>
       <Routes>
