@@ -1,17 +1,26 @@
-import React, { useState } from 'react';
-import Title from '../Modules/Title';
-import Tabs from '../Modules/Tabs';
-import SearchBar from '../Modules/Home/SearchBar';
-import SearchResult from '../Modules/Home/SearchResult';
-import NutritionTitle from '../Modules/Home/NutritionTitle';
-import '../css/Home.css'
+import React, { useState } from "react";
+import Title from "../Modules/Title";
+import Tabs from "../Modules/Tabs";
+import SearchBar from "../Modules/Home/SearchBar";
+import SearchResult from "../Modules/Home/SearchResult";
+import NutritionTitle from "../Modules/Home/NutritionTitle";
+import axios from "axios";
+import "../css/Home.css";
 
 function Home() {
   const [searchResult, setSearchResult] = useState([]);
-  
-  const handleSearchQuery = (searchText) => {
+
+  const handleSearchQuery = async (searchText) => {
     // TODO: Implement search functionality here and update searchResult state
-    setSearchResult([{food_id: 1, brand_type: 'Brand A'}, {food_id: 2, brand_type: 'Brand B'}]);
+    /* setSearchResult([{food_id: 1, brand_type: 'Brand A'}, {food_id: 2, brand_type: 'Brand B'}]); */
+    await axios.get("http://localhost:4000/foods/searchFood?food=" + searchText)
+      .then((res) => {
+        console.log(res)
+        setSearchResult(res);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
