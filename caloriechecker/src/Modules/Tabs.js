@@ -5,24 +5,22 @@ import '../css/tabs.css'
 
 function Tabs() {
   const navigate = useNavigate();
-  const [showModal, setShowModal] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [showSignUpModal, setShowSignUpModal] = useState(false);
 
-  const handleShowModal = () => {
-    setShowModal(true);
-  };
-
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
+  const handleShowLoginModal = () => setShowLoginModal(true);
+  const handleCloseLoginModal = () => setShowLoginModal(false);
+  const handleShowSignUpModal = () => setShowSignUpModal(true);
+  const handleCloseSignUpModal = () => setShowSignUpModal(false);
 
   const handleSignInSubmit = (event) => {
     event.preventDefault();
-    // handle sign-in form submission here
+    // Handle sign-in submission logic here
   };
 
   const handleSignUpSubmit = (event) => {
     event.preventDefault();
-    // handle sign-up form submission here
+    // Handle sign-up submission logic here
   };
 
   return (
@@ -39,15 +37,15 @@ function Tabs() {
         <button className="button" onClick={() => navigate('/AboutUs')}>
           AboutUs
         </button>
-
-        <Button className='sign' variant="primary" onClick={handleShowModal}>
-          SignIn/Sign-up
-        </Button>
       </div>
 
-      <Modal show={showModal} onHide={handleCloseModal}>
+      <Button className='sign' variant="primary" onClick={handleShowLoginModal}>
+        Login
+      </Button>
+
+      <Modal show={showLoginModal} onHide={handleCloseLoginModal}>
         <Modal.Header closeButton>
-          <Modal.Title>Weightloss</Modal.Title>
+          <Modal.Title>Weightloss Login</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
@@ -64,16 +62,24 @@ function Tabs() {
             <Button variant="primary" type="submit" onClick={handleSignInSubmit}>
               Sign In
             </Button>
+            <Button variant="Secondary" type="button" onClick={handleShowSignUpModal}>
+              Sign Up
+            </Button>
           </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseLoginModal}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
 
-          <hr />
-
+      <Modal show={showSignUpModal} onHide={handleCloseSignUpModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Weightloss SignUp</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
           <Form>
-            <Form.Group controlId="formBasicName">
-              <Form.Label>Name</Form.Label>
-              <Form.Control type="text" placeholder="Enter name" />
-            </Form.Group>
-
             <Form.Group controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
               <Form.Control type="email" placeholder="Enter email" />
@@ -84,13 +90,18 @@ function Tabs() {
               <Form.Control type="password" placeholder="Password" />
             </Form.Group>
 
+            <Form.Group controlId="formBasicConfirmPassword">
+              <Form.Label>Confirm Password</Form.Label>
+              <Form.Control type="password" placeholder="Confirm Password" />
+            </Form.Group>
+
             <Button variant="primary" type="submit" onClick={handleSignUpSubmit}>
-              Sign Up
+              Create Account
             </Button>
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseModal}>
+          <Button variant="secondary" onClick={handleCloseSignUpModal}>
             Close
           </Button>
         </Modal.Footer>
