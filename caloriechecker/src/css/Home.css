@@ -1,130 +1,91 @@
 #content {
-    width: 500px;
-    margin: 0 auto;
-    font-family: sans-serif;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-  }
-  
-  .searchName {
-    color: rgb(0, 0, 0); 
-    text-align: center;
-    font-size: smaller;
-    margin: 45px;
-  }
-  
-  button.learnMore { 
-    margin: 0 auto;
-    padding:  1px;
-    margin: auto;
-    display: block;
-    font-weight: bold;
-    text-align: center;
-    background-color: #0d6efd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 20px auto;
   }
   
   .nutritionTitle {
-    font-size: 1.5rem;
-    font-weight: bold;
-    line-height: 1.75;
-    margin-bottom: 5%;
-    padding: 2%;
-    text-align: center;
+    grid-column: 1 / 3;
+    font-size: 30px;
+    margin-bottom: 10px;
   }
   
-  h1 {
-    font-size: 2rem;
-    font-weight: 300;
-    line-height: 1.75;
-    margin-top: 5%;
-    width: 80%;
-    text-align: center;
+  .searchName {
+    font-size: 25px;
   }
   
-  button {
+
+  .searchButton {
     border: none;
-    background: #f2df47;
-    color: #000;
-    padding: 10px;
-    font-size: 1.2rem;
+    border-radius: 4px;
+    width: 100px;
+    height: 40px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
     font-weight: bold;
-    margin-top: 20px;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+  
+  .searchButton:hover {
+    background-color: #0069d9;
     cursor: pointer;
   }
   
-  label {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 600;
-    padding: 5px 0;
+
+  
+  .servings {
+    font-size: 20px;
+    margin-right: 10px;
   }
   
-  input[type="number"] {
-    border: none;
-    border-bottom: 1px solid black;
-    padding: 3px 0;
-    width: 50%;
-    font-size: 14px;
-    font-weight: 400;
-    text-align: center;
-  
-    &::placeholder {
-      font-family: sans-serif;
-      font-style: italic;
-      font-size: 0.7em;
-    }
+  #number-input {
+    width: 100px;
+    height: 25px;
+    font-size: 16px;
   }
   
   #dropdown-menu {
     width: 150px;
-    font-size: 1rem;
-    font-weight: 600;
-    text-align: center;
-  }
-  
-  .searchBar { 
-    grid-column: 1 / 3;
-    text-align: center;
-    margin: 20px auto;
-  }
-  
-  .searchfor {
-    display: block;
-    margin: 10px auto; 
+    height: 35px;
     font-size: 16px;
-    padding: 8px 15px;
-    border: 1px solid #ddd;
-    width: 25%; 
-    box-sizing: border-box;
-  }
-  
-  .searchButton {
-    padding: 8px 15px;
-    font-size: 16px;
-    background: #0d6efd;
-    color: #fff;
-    border-radius: 4px;
-    margin: 10px 5px;
-    cursor: pointer;  
-  }
-  
-  .resultsTitle {
-    margin-top: 10px;
-    color: #555; 
   }
   
   .nutritionInfo {
-    grid-column: 1/ 3;
-    padding: 10px 0;
+    grid-column: 1 / 3;
+    margin-top: 20px;
+  }
   
-    table tr td:not(:last-child) {
-        border-bottom: 1px solid;
-        width: 100%;
-        text-align: center;
-        border-collapse: collapse;
-      }
-    }
-        
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    margin: 0 auto;
+  }
+  
+  th {
+    text-align: left;
+    font-weight: normal;
+  }
+  
+  td {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .sub {
+    padding-left: 20px;
+  }
+  
+  .last {
+    border-bottom: none;
+  }
+  
+  .alt {
+    background-color: #f2f2f2;
+  }
+  
