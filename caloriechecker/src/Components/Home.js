@@ -13,10 +13,9 @@ function Home() {
   const handleSearchQuery = async (searchText) => {
     // TODO: Implement search functionality here and update searchResult state
     /* setSearchResult([{food_id: 1, brand_type: 'Brand A'}, {food_id: 2, brand_type: 'Brand B'}]); */
-    await axios.get("http://localhost:4000/foods/", {
-        food: searchText,
-      })
+    await axios.get("http://localhost:4000/foods/searchFood?food=" + searchText)
       .then((res) => {
+        console.log(res)
         setSearchResult(res);
       })
       .catch((error) => {
