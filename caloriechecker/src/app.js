@@ -5,6 +5,8 @@ import AboutUs from './Components/AboutUs'
 import Register from './Components/Register'
 import Login from './Components/Login'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { useState } from 'react'
 import axios from 'axios'
 
@@ -52,6 +54,10 @@ function App() {
     })
     .catch(error => console.log(error))
   }
+
+
+function App() {
+  
 
   return (
     <Router>
