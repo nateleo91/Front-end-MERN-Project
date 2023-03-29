@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../../css/Create.css'
 
 function NutritionInput() {
 	const [nutritionInputs, setNutritionInputs] = useState({
@@ -33,7 +34,7 @@ function NutritionInput() {
 	  const { name, calories, totalFat, saturatedFat, polyunsaturatedFat, monounsaturatedFat, transFat, cholesterol, sodium, totalCarbs, dietaryFiber, sugars, protein } = nutritionInputs;	
 	
 	  return(
-		<div>
+		<div className="Create">
 		<h2>Enter Nutritional Information</h2>
 
 		<form onSubmit={handleSubmit}>

@@ -1,15 +1,11 @@
 .title {
   text-align: center;
-  background-color: #a0b0bdc6;
+  font-size: 24px !important;
 }
 
 .link {
   text-decoration: none;
   color: black;
-}
-
-.titleText h1 {
-  font-size: 50px;
 }
 
 .buttons { 
@@ -21,17 +17,18 @@
 
 
 .button {
-  border: none;
-  background-color: #0d6efd;
-  font-size: 14px;
-  font-style: normal;
-  font-style:normal;
-  margin: 0 10px;
-  padding: 9px 20px;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  border-radius: 20px;    
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-right: 1px solid rgba(0, 0, 0, 0.25);
+    cursor: pointer;   
 }
+
+.button:hover {
+    background-color: #0069d9;
+    cursor: pointer;
+  }
 
 .button-group {
 display: flex;
@@ -39,10 +36,10 @@ justify-content: center;
 align-items: center;
 text-align: center;
 flex-grow: 1;
+display: flex;
 }
 
 .sign {
-  color: #0d6efd;
   background-color: #a0b0bdc6;
   border: none;
   font: inherit;

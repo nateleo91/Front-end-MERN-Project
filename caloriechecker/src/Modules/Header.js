@@ -24,10 +24,9 @@ function Header() {
   };
 
   return (
-    
     <div className="buttons">
       <div className="title">
-        <a href='/' className="link"> <h1 className="titleText">Weightloss Tracker</h1> </a>
+        <a href='/' className="link"> <h1 className="title">Weightloss Tracker</h1> </a>
       </div>
       <div className="button-group">
         <button className="button" onClick={() => navigate('/diary')}>
@@ -44,7 +43,7 @@ function Header() {
       </div>
 
       <Button className='sign' variant="primary" onClick={handleShowLoginModal}>
-        Login
+        SignIn/SignUp
       </Button>
 
       <Modal show={showLoginModal} onHide={handleCloseLoginModal}>
