@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import Title from "../Modules/Title";
-import Tabs from "../Modules/Tabs";
+import Header from "../Modules/Header";
 import Footer from '../Modules/Footer';
 import SearchBar from "../Modules/Home/SearchBar";
 import SearchResult from "../Modules/Home/SearchResult";
@@ -26,8 +25,7 @@ function Home() {
 
   return (
     <div>
-      <Title />
-      <Tabs />
+      <Header />
       <SearchBar handleSearchQuery={handleSearchQuery} />
       <SearchResult searchResult={searchResult} />
       <NutritionTitle />

@@ -1,36 +1,49 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { i18n } from 'i18next';
 import Select from 'react-select';
-// import '../css/Footer.css'
+import '../css/footer.css'
 
 
 
 function Footer() {
-    const [selectedLanguage, setSelectedLanguage] = useState(null);
-const languages = [
-  { value: 'en', label: 'English' },
-  { value: 'es', label: 'Español' },
-  { value: 'fr', label: 'Français' },
-  // add more languages as needed
-];
-
-  return (
-    <footer>
-    <div className="title">
-      <a href='/' className="link"> <h1 className="titleText">Weightloss Tracker</h1></a>
-      <Select
-          options={languages}
-          value={selectedLanguage}
-          onChange={setSelectedLanguage}
-        />
-      <button>Blogs</button>
-      <button>Terms</button>
-      <button>Privacy</button>
-      <button>Contact</button>
-      <button>Feedback</button>
-      <button>Community</button>
-    </div>
-    </footer>
-  );
-}
+    const { t } = useTranslation();
+    const [selectedLanguage, setSelectedLanguage] = useState('en');
+    
+    const languages = [
+      { value: 'en', label: 'English' },
+      { value: 'es', label: 'Español' },
+      { value: 'fr', label: 'Français' },
+    ];
+  
+    const handleLanguageChange = (selectedOption) => {
+      setSelectedLanguage(selectedOption.value);
+    //   i18n.changeLanguage(selectedOption.value);
+    };
+  
+    return (
+      <footer>
+        <div className="footer-container">
+          <div className="buttons-container">
+            <button><a href="/" className="link">
+            Wightloss Tracker</a></button>
+            <button><a className="link">{t('blogs')}</a></button>
+            <button><a className="link">{t('terms')}</a></button>
+            <button><a className="link">{t('privacy')}</a></button>
+            <button><a className="link">{t('contact')}</a></button>
+            <button><a className="link">{t('feedback')}</a></button>
+            <button><a className="link">{t('community')}</a></button>
+          </div>
+          <div className="language-container">
+            <Select
+              options={languages}
+              value={selectedLanguage}
+              onChange={handleLanguageChange}
+            />
+          </div>
+        </div>
+      </footer>
+    );
+  }
 
 export default Footer;

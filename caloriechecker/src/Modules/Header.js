@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Modal, Button, Form } from 'react-bootstrap';
-import '../css/tabs.css'
+import '../css/Header.css'
 
-function Tabs() {
+function Header() {
   const navigate = useNavigate();
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showSignUpModal, setShowSignUpModal] = useState(false);
@@ -24,7 +24,11 @@ function Tabs() {
   };
 
   return (
+    
     <div className="buttons">
+      <div className="title">
+        <a href='/' className="link"> <h1 className="titleText">Weightloss Tracker</h1> </a>
+      </div>
       <div className="button-group">
         <button className="button" onClick={() => navigate('/diary')}>
           Diary
@@ -110,4 +114,4 @@ function Tabs() {
   );
 }
 
-export default Tabs;
+export default Header;
