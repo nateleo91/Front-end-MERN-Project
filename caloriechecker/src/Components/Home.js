@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Title from "../Modules/Title";
 import Tabs from "../Modules/Tabs";
+import Footer from '../Modules/Footer';
 import SearchBar from "../Modules/Home/SearchBar";
 import SearchResult from "../Modules/Home/SearchResult";
 import NutritionTitle from "../Modules/Home/NutritionTitle";
@@ -30,6 +31,7 @@ function Home() {
       <SearchBar handleSearchQuery={handleSearchQuery} />
       <SearchResult searchResult={searchResult} />
       <NutritionTitle />
+      <Footer />
     </div>
   );
 }

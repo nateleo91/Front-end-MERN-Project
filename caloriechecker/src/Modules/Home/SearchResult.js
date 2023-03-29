@@ -10,7 +10,7 @@ function SearchResult({ searchResult }) {
           /* searchResult.data[0].food_name */
           searchResult.data.map((food) => (
             <div key={food._id}>
-              <p>Food name: {food.food_name}</p>
+              <p>{food.food_name}</p>
             </div>
           ))}
         </div>

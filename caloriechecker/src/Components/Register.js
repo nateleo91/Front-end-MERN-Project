@@ -1,5 +1,6 @@
 import React from "react";
 import Title from "../Modules/Title";
+import Footer from '../Modules/Footer';
 import RegisterForm from "../Modules/Login&register/RegisterForm";
 
 function Register(props) {
@@ -10,6 +11,7 @@ function Register(props) {
     <div>
       <Title />
       <RegisterForm handleInput={handleInput} handleSignUp={handleSignUp} />
+      <Footer />
     </div>
   );
 }
