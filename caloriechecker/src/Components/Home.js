@@ -7,7 +7,10 @@ import NutritionTitle from "../Modules/Home/NutritionTitle";
 import axios from "axios";
 import "../css/Home.css";
 
-function Home() {
+function Home(props) {
+  const handleInput = props.handleInput
+  const handleLogIn = props.handleLogIn
+  const handleSignUp = props.handleSignUp
   const [searchResult, setSearchResult] = useState([]);
 
   const handleSearchQuery = async (searchText) => {
@@ -26,7 +29,7 @@ function Home() {
   return (
     <div>
       <Title />
-      <Tabs />
+      <Tabs handleInput={handleInput} handleLogIn={handleLogIn} handleSignUp={handleSignUp}/>
       <SearchBar handleSearchQuery={handleSearchQuery} />
       <SearchResult searchResult={searchResult} />
       <NutritionTitle />

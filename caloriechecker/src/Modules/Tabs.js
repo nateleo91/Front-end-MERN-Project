@@ -3,7 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import { Modal, Button, Form } from 'react-bootstrap';
 import '../css/tabs.css'
 
-function Tabs() {
+function Tabs(props) {
+  const handleInput = props.handleInput
+  const handleLogIn = props.handleLogIn
+  const handleSignUp = props.handleSignUp
+
   const navigate = useNavigate();
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showSignUpModal, setShowSignUpModal] = useState(false);
@@ -13,15 +17,19 @@ function Tabs() {
   const handleShowSignUpModal = () => setShowSignUpModal(true);
   const handleCloseSignUpModal = () => setShowSignUpModal(false);
 
-  const handleSignInSubmit = (event) => {
+/*   
+Not needed?
+const handleSignInSubmit = (event) => {
     event.preventDefault();
     // Handle sign-in submission logic here
-  };
+  }; */
 
-  const handleSignUpSubmit = (event) => {
+/* 
+Not needed?
+const handleSignUpSubmit = (event) => {
     event.preventDefault();
     // Handle sign-up submission logic here
-  };
+  }; */
 
   return (
     <div className="buttons">
@@ -51,15 +59,15 @@ function Tabs() {
           <Form>
             <Form.Group controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
+              <Form.Control type="email" name="email" placeholder="Enter email" onChange={handleInput}/>
             </Form.Group>
 
             <Form.Group controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
+              <Form.Control type="password" name="password" placeholder="Password" onChange={handleInput}/>
             </Form.Group>
 
-            <Button variant="primary" type="submit" onClick={handleSignInSubmit}>
+            <Button variant="primary" type="submit" onClick={handleLogIn}>
               Sign In
             </Button>
             <Button variant="Secondary" type="button" onClick={handleShowSignUpModal}>
@@ -82,20 +90,20 @@ function Tabs() {
           <Form>
             <Form.Group controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
+              <Form.Control type="email" name="email" placeholder="Enter email" onChange={handleInput}/>
             </Form.Group>
 
             <Form.Group controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
+              <Form.Control type="password" name="password" placeholder="Password" onChange={handleInput}/>
             </Form.Group>
 
             <Form.Group controlId="formBasicConfirmPassword">
               <Form.Label>Confirm Password</Form.Label>
-              <Form.Control type="password" placeholder="Confirm Password" />
+              <Form.Control type="password" name="retypePassword" placeholder="Confirm Password" />
             </Form.Group>
 
-            <Button variant="primary" type="submit" onClick={handleSignUpSubmit}>
+            <Button variant="primary" type="submit" onClick={handleSignUp}>
               Create Account
             </Button>
           </Form>
