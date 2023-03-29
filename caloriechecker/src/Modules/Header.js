@@ -29,6 +29,9 @@ function Tabs(props) {
 
   return (
     <div className="buttons">
+      <div className="title">
+        <a href='/' className="link"> <h1 className="title">Weightloss Tracker</h1> </a>
+      </div>
       <div className="button-group">
         <button className="button" onClick={() => navigate('/diary')}>
           Diary
@@ -44,7 +47,7 @@ function Tabs(props) {
       </div>
 
       <Button className='sign' variant="primary" onClick={handleShowLoginModal}>
-        Login
+        SignIn/SignUp
       </Button>
 
       <Modal show={showLoginModal} onHide={handleCloseLoginModal}>
