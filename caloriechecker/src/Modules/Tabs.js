@@ -22,10 +22,8 @@ Not needed?
 const handleSignInSubmit = (event) => {
     event.preventDefault();
     // Handle sign-in submission logic here
-  }; */
+  };
 
-/* 
-Not needed?
 const handleSignUpSubmit = (event) => {
     event.preventDefault();
     // Handle sign-up submission logic here
@@ -100,7 +98,7 @@ const handleSignUpSubmit = (event) => {
 
             <Form.Group controlId="formBasicConfirmPassword">
               <Form.Label>Confirm Password</Form.Label>
-              <Form.Control type="password" name="retypePassword" placeholder="Confirm Password" />
+              <Form.Control type="password" name="retypePassword" onChange={handleInput} placeholder="Confirm Password" />
             </Form.Group>
 
             <Button variant="primary" type="submit" onClick={handleSignUp}>

@@ -28,7 +28,7 @@ function App() {
     console.log(user.email, user.password)
   }
   async function handleSignUp(e) {
-    console.log(user.email, user.password)
+    console.log(user.email, user.password, user.retypePassword)
     e.preventDefault()
     if(user.password === user.retypePassword){
       await axios.post("http://localhost:4000/users/signup", {
@@ -43,7 +43,7 @@ function App() {
       .catch(error => console.log(error))
     } else {
       console.log("password don't match")
-      //make passwords dont match a popup
+      //make passwords dont match a popup alerting of mismatched password
     }
   }
 
