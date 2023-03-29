@@ -18,11 +18,13 @@
 
 .button {
   display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    border-right: 1px solid rgba(0, 0, 0, 0.25);
-    cursor: pointer;   
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 5px 12px;
+  border: 0;
+  font-size: 14px;
+  margin-top: 5px; 
 }
 
 .button:hover {

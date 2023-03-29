@@ -26,8 +26,6 @@ function Home() {
   return (
     <div>
       <Header />
-      <SearchBar handleSearchQuery={handleSearchQuery} />
-      <SearchResult searchResult={searchResult} />
       <NutritionTitle />
       <Footer />
     </div>

@@ -64,7 +64,7 @@ function NutritionInput() {
 <input type="number" id="sugars-input" name="sugars" value={sugars} onChange={handleInputChange} step="1" />
 <label htmlFor="protein-input">Protein:</label>
 <input type="number" id="protein-input" name="protein" value={protein} onChange={handleInputChange} step="1" />
-<button type="submit">Submit</button>
+<button className="submit" type="submit">Submit</button>
   </form>
 	  </div>
 	)
