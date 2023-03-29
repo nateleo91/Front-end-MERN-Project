@@ -1,5 +1,6 @@
 import React from "react";
-import Title from "../Modules/Title";
+import Header from '../Modules/Header'
+import Footer from '../Modules/Footer';
 import LoginForm from "../Modules/Login&register/LoginForm";
 
 function Login(props) {
@@ -8,8 +9,9 @@ function Login(props) {
 
   return (
     <div>
-      <Title />
+      <Header />
       <LoginForm handleInput={handleInput} handleLogIn={handleLogIn} />
+      <Footer />
     </div>
   );
 }

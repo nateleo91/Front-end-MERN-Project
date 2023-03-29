@@ -1,0 +1,86 @@
+footer {
+    background-color: #D1E4F4;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #D1E4F4;
+  }
+
+  .footer-Buttons {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+  }
+  
+  .title {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .title h1 {
+    color: #222;
+    font-size: 10px;
+  }
+  
+  .buttons-container {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+    color: #222;
+    font-size: 10px;
+  }
+  
+  .buttons-container button {
+    margin-right: 1rem;
+    color: #222;
+    background-color: #D1E4F4;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .buttons-container button:hover {
+    color: #fff;
+  }
+  
+  .language-container {
+    flex-grow: 1;
+    text-align: right;
+    margin-right: 2rem;
+  }
+  
+  .language-container .react-select__control {
+    width: 200px;
+  }
+  
+  .language-container .react-select__value-container {
+    padding: 0;
+  }
+  
+  .language-container .react-select__menu {
+    width: 200px;
+  }
+  
+  .language-container .react-select__menu-list {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .language-container .react-select__option {
+    color: #222;
+    background-color: #D1E4F4;
+    cursor: pointer;
+  }
+  
+  .language-container .react-select__option:hover {
+    background-color: #fff;
+  }

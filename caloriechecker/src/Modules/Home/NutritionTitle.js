@@ -28,7 +28,6 @@ function NutritionFacts() {
       
       
     <div>
-      <SearchBar handleSearchQuery={handleSearchQuery} />
         <label htmlFor="number-input" className="servings">
           Servings:
         </label>
