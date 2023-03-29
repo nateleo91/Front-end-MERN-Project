@@ -13,12 +13,14 @@ label {
 
 form {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 0.8fr 2fr;
   gap: 10px;
   align-items: center;
   padding: 10px;
 }
-button {
+.submit {
+  background-color: blue;
+  color: white;
   padding: 5px 12px;
   border: 0;
   font-size: 14px;

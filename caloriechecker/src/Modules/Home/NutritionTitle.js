@@ -24,10 +24,13 @@ function NutritionFacts() {
   
   return (
     <div id="content">
-      <h2 className="nutritionTitle">Nutrition Facts</h2>
-      
+      <div>
+        <SearchBar handleSearchQuery={handleSearchQuery} />
+        <SearchResult searchResult={searchResult} />
+      </div>
       
     <div>
+    <h2 className="nutritionTitle">Nutrition Facts</h2>
         <label htmlFor="number-input" className="servings">
           Servings:
         </label>
