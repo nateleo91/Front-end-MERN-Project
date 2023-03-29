@@ -70,16 +70,16 @@ class MealTable extends React.Component {
    };
    
    return (
-    <tr key={meal.mealType}>
-      <td>{meal.mealType}</td>
-      <td>{meal.calories} kcal</td>
-      <td>{meal.carbs} g</td>
-      <td>{meal.fat} g</td>
-      <td>{meal.protein} g</td>
-      <td>{meal.sodium} mg</td>
-      <td>{meal.sugar} g</td>        
-      <td><a href="#" onClick={handleAddFoodClick}>Add Food</a></td>
-    </tr>
+      <tr key={meal.mealType}>
+        <td>{meal.mealType}</td>
+        <td>{meal.calories} kcal</td>
+        <td>{meal.carbs} g</td>
+        <td>{meal.fat} g</td>
+        <td>{meal.protein} g</td>
+        <td>{meal.sodium} mg</td>
+        <td>{meal.sugar} g</td>        
+        <td><a href="#" onClick={handleAddFoodClick}>Add Food</a></td>
+      </tr>
   );
 }
 calculateTotals() {
@@ -99,26 +99,26 @@ calculateTotals() {
     }
   }
   return totals;
-}
-render() {
-  let totals = this.calculateTotals();
-  return (
-    <div>
-      <h1>Meal Table</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Meal Type</th>
-            <th>Calories (kcal)</th>
-            <th>Carbs (g)</th>
-            <th>Fat (g)</th>
-            <th>Protein (g)</th>
-            <th>Sodium (mg)</th>
-            <th>Sugar (g)</th>
-            <th>Tools</th>
-          </tr>
-        </thead>
-        <tbody>
+  }
+  render() {
+    let totals = this.calculateTotals();
+    return (
+      <div>
+        <h1>Meal Table</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Meal Type</th>
+              <th>Calories (kcal)</th>
+              <th>Carbs (g)</th>
+              <th>Fat (g)</th>
+              <th>Protein (g)</th>
+              <th>Sodium (mg)</th>
+              <th>Sugar (g)</th>
+              <th>Tools</th>
+            </tr>
+          </thead>
+          <tbody>
             {this.state.meals.map(this.renderMealRow)}
             <tr>
               <td>Totals:</td>

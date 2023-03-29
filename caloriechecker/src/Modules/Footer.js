@@ -24,7 +24,7 @@ function Footer() {
         <div className="footer-container">
           <div className="buttons-container">
             <button><a href="/" className="link">
-            Wightloss Tracker</a></button>
+            Weightloss Tracker</a></button>
             <button><a className="link">{('blogs')}</a></button>
             <button><a className="link">{('terms')}</a></button>
             <button><a className="link">{('privacy')}</a></button>
