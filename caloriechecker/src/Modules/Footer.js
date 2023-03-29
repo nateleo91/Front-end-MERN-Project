@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { i18n } from 'i18next';
 import Select from 'react-select';
 import '../css/footer.css'
 
 
 
 function Footer() {
-    const { t } = useTranslation();
+    // const { t } = useTranslation();
     const [selectedLanguage, setSelectedLanguage] = useState('en');
     
     const languages = [
@@ -27,12 +25,12 @@ function Footer() {
           <div className="buttons-container">
             <button><a href="/" className="link">
             Wightloss Tracker</a></button>
-            <button><a className="link">{t('blogs')}</a></button>
-            <button><a className="link">{t('terms')}</a></button>
-            <button><a className="link">{t('privacy')}</a></button>
-            <button><a className="link">{t('contact')}</a></button>
-            <button><a className="link">{t('feedback')}</a></button>
-            <button><a className="link">{t('community')}</a></button>
+            <button><a className="link">{('blogs')}</a></button>
+            <button><a className="link">{('terms')}</a></button>
+            <button><a className="link">{('privacy')}</a></button>
+            <button><a className="link">{('contact')}</a></button>
+            <button><a className="link">{('feedback')}</a></button>
+            <button><a className="link">{('community')}</a></button>
           </div>
           <div className="language-container">
             <Select
