@@ -1,29 +1,56 @@
-input[type='text'], 
-input[type='number'] {
-  width: 200px;
-  padding: 5px;
-  border-radius: 3px;
+.Create {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 50px;
+    text-align: center;
+  }
+  
+  .Create h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #007bff;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  #name-input {
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: auto;
 }
-
-label {
-  font-size: 14px;
-  font-weight: bold;
-  margin-right: 7px;
-}
-
-form {
-  display: grid;
-  grid-template-columns: 0.8fr 2fr;
-  gap: 10px;
-  align-items: center;
-  padding: 10px;
-}
-.submit {
-  background-color: blue;
-  color: white;
-  padding: 5px 12px;
-  border: 0;
-  font-size: 14px;
-  margin-top: 5px;
-  border-radius: 3px;
-}
+  input[type='text'],
+  input[type='number'] {
+    width: 55px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 7px;
+  }
+  
+  form {
+    display: grid;
+    grid-template-columns: 0.8fr 2fr;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    margin: 0 auto;
+    width: 40%;
+  }
+  
+  .submit {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 12px;
+    border: 0;
+    font-size: 14px;
+    margin-top: 5px;
+    border-radius: 3px;
+    text-align: center;
+  }
