@@ -50,3 +50,8 @@ display: flex;
   cursor: pointer;
   margin-left: auto;
 }
+
+.login-modal {
+  display: flex;
+  justify-content: center;
+}
