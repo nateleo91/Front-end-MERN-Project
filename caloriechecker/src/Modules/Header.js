@@ -14,7 +14,7 @@ function Header(props) {
 
   const handleShowLoginModal = () => setShowLoginModal(true);
   const handleCloseLoginModal = () => setShowLoginModal(false);
-  const handleShowSignUpModal = () => setShowSignUpModal(true);
+  const handleShowSignUpModal = () => { setShowSignUpModal(true); setShowLoginModal(false); }
   const handleCloseSignUpModal = () => setShowSignUpModal(false);
 
   const handleSignInSubmit = (event) => {
@@ -50,7 +50,7 @@ function Header(props) {
         SignIn/SignUp
       </Button>
 
-      <Modal show={showLoginModal} onHide={handleCloseLoginModal}>
+      <Modal show={showLoginModal} onHide={handleCloseLoginModal} className="login-modal">
         <Modal.Header closeButton>
           <Modal.Title>Weightloss Login</Modal.Title>
         </Modal.Header>
