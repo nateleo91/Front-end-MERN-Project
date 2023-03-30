@@ -2,8 +2,10 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    height: auto;
     max-width: 800px;
-    margin: 20px auto;
+    margin: 150px auto;
   }
 
   #content > div:first-child {
@@ -21,7 +23,25 @@
   .searchName {
     font-size: 25px;
   }
+
+  .searchBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
   
+  .searchBar h6 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-right: auto;
+  }
+
+  .searchfor {
+    width: 200px;
+    padding: 5px;
+    font-size: 16px;
+  }
 
   .searchButton {
     border: none;
@@ -48,12 +68,21 @@
     padding: 10px;
     margin-top: 10px;
     background-color: #f5f5f5;
+    height: 300px; /* set a fixed height to make the box larger */
+    overflow-y: scroll; /* enable vertical scrollbar if content exceeds height */
+  }
+
+  .resultsTitle {
+    font-size: 20px;
+    margin-top: 20px;
+    width: fit-content;
+    margin-right: auto;
+    font-weight: bold;
   }
 
 .resultBox {
-  margin-top: 10px;
-  margin-bottom: 10px;
-
+    height: 300px; /* set a fixed height to make the box larger */
+    overflow-y: scroll; /* enable vertical scrollbar if content exceeds height */
 }
   
   .servings {

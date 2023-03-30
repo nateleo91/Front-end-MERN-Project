@@ -1,5 +1,8 @@
 footer {
     background-color: #D1E4F4;
+    position: absolute;
+  bottom: 0;
+  width: 100%;
   }
   
   .footer-container {
@@ -53,34 +56,37 @@ footer {
   }
   
   .language-container {
-    flex-grow: 1;
-    text-align: right;
-    margin-right: 2rem;
+    width: 200px; /* set a fixed width to make the container smaller */
+    margin: 0 auto; /* center the container horizontally */
   }
   
-  .language-container .react-select__control {
-    width: 200px;
+  /* Apply some default styles to the Select component */
+  .react-select-container {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
   }
   
-  .language-container .react-select__value-container {
-    padding: 0;
+  /* Style the Select component dropdown */
+  .react-select__control {
+    border: 1px solid #d2d2d2;
+    border-radius: 5px;
+    box-shadow: none;
+    height: 38px;
+    padding: 0 10px;
   }
   
-  .language-container .react-select__menu {
-    width: 200px;
+  /* Style the Select component options */
+  .react-select__option {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
   }
   
-  .language-container .react-select__menu-list {
-    padding: 0;
-    margin: 0;
+  /* Style the Select component selected option */
+  .react-select__single-value {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
   }
   
-  .language-container .react-select__option {
-    color: #222;
-    background-color: #D1E4F4;
-    cursor: pointer;
-  }
-  
-  .language-container .react-select__option:hover {
-    background-color: #fff;
-  }
