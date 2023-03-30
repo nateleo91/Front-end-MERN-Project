@@ -24,7 +24,7 @@ function NutritionFacts() {
   
   return (
     <div id="content">
-      <div>
+      <div className="left">
         <SearchBar handleSearchQuery={handleSearchQuery} />
         <SearchResult searchResult={searchResult} />
       </div>
