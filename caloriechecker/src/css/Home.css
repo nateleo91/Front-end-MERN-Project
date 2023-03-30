@@ -1,10 +1,16 @@
+* {
+  border: 1px solid red;
+}  
+  
+  
+
   #content {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     height: auto;
-    max-width: 800px;
+    max-width: 90vw;
     margin: 150px auto;
   }
 
@@ -38,7 +44,7 @@
   }
 
   .searchfor {
-    width: 200px;
+    width: 300px;
     padding: 5px;
     font-size: 16px;
   }
@@ -87,33 +93,41 @@
   
   .servings {
     font-size: 20px;
+    margin-left: 85px;
     margin-right: 10px;
   }
   
   #number-input {
-    width: 100px;
+    width: 50px;
     height: 25px;
     font-size: 16px;
+    margin-left: 10px;
   }
   
   #dropdown-menu {
     width: 150px;
-    height: 35px;
+    height: 25px;
     font-size: 16px;
+    margin-left: 20px;
   }
   
   .nutritionInfo {
     grid-column: 1 / 3;
     margin-top: 20px;
+    width: 500px;
   }
   
-  table {
+  .nutritiontable {
     width: 100%;
     border-collapse: collapse;
     font-size: 16px;
-    margin: 0 auto;
+    
   }
   
+.tableBody {
+  width: 100%;
+}
+
   th {
     text-align: left;
     font-weight: normal;
@@ -122,6 +136,10 @@
   td {
     padding: 5px;
     border-bottom: 1px solid #ddd;
+  }
+
+  .col-1 {
+    width: 50%;
   }
   
   .sub {
