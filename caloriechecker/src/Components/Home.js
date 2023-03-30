@@ -28,7 +28,7 @@ function Home(props) {
 
   return (
     <div>
-      <Header />
+      <Header handleInput={handleInput} handleLogIn={handleLogIn} handleSignUp={handleSignUp}/>
       <NutritionTitle />
       <Footer />
     </div>

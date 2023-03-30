@@ -2,8 +2,6 @@ import Home from './Components/Home'
 import Diary from './Components/Diary'
 import Create from './Components/Create'
 import AboutUs from './Components/AboutUs'
-import Register from './Components/Register'
-import Login from './Components/Login'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -70,8 +68,6 @@ function App() {
         <Route path="/diary" element={<Diary />} />
         <Route path="/Create" element={<Create />} />
         <Route path="/AboutUs" element={<AboutUs />} />
-        <Route path="/Register" element={<Register handleInput={handleInput} handleSignUp={handleSignUp}/>} />
-        <Route path="/Login" element={<Login handleInput={handleInput} handleLogIn={handleLogIn} />} />
       </Routes>
     </Router>
   );

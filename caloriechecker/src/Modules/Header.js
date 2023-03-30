@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Modal, Button, Form } from 'react-bootstrap';
 import '../css/Header.css'
 
-function Tabs(props) {
+function Header(props) {
   const handleInput = props.handleInput
   const handleLogIn = props.handleLogIn
   const handleSignUp = props.handleSignUp
@@ -117,4 +117,4 @@ function Tabs(props) {
   );
 }
 
-export default Tabs;
+export default Header;
