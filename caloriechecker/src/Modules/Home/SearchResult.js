@@ -5,7 +5,7 @@ function SearchResult({ searchResult }) {
   return (
     <div className="searchResult">
       {searchResult.data && (
-        <div>
+        <div className="resultBox">
           {
           /* searchResult.data[0].food_name */
           searchResult.data.map((food) => (
