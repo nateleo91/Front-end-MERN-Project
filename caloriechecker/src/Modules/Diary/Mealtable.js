@@ -7,45 +7,25 @@ class MealTable extends React.Component {
 
     this.state = {
       meals: [
-        {
-          mealType: 'Breakfast',
-          calories: 0,
-          carbs: 0,
-          fat: 0,
-          protein: 0,
-          sodium: 0,
-          sugar: 0
-        },
-        {
-          mealType: 'Lunch',
-          calories: 0,
-          carbs: 0,
-          fat: 0,
-          protein: 0,
-          sodium: 0,
-          sugar: 0
-        },
-        {
-          mealType: 'Dinner',
-          calories: 0,
-          carbs: 0,
-          fat: 0,
-          protein: 0,
-          sodium: 0,
-          sugar: 0
-        },
-        {
-          mealType: 'Snacks',
-          calories: 0,
-          carbs: 0,
-          fat: 0,
-          protein: 0,
-          sodium: 0,
-          sugar: 0
-        }
+        { type: 'Breakfast', ...this.initNutrientsObject() },
+        { type: 'Lunch', ...this.initNutrientsObject() },
+        { type: 'Dinner', ...this.initNutrientsObject() },
+        { type: 'Snacks', ...this.initNutrientsObject() }
       ]
     };
   }
+  
+  initNutrientsObject(){
+      return {
+        calories: 0,
+        carbs: 0,
+        fat: 0,
+        protein: 0,
+        sodium: 0,
+        sugar: 0
+      }
+  }
+
   renderMealRow(meal) {
     const handleAddFoodClick = () => {
       // Open a popup when Add Food is clicked
@@ -71,7 +51,7 @@ class MealTable extends React.Component {
    
    return (
       <tr key={meal.mealType}>
-        <td>{meal.mealType}</td>
+        <td>{meal.type}</td>
         <td>{meal.calories} kcal</td>
         <td>{meal.carbs} g</td>
         <td>{meal.fat} g</td>
@@ -81,8 +61,9 @@ class MealTable extends React.Component {
         <td><a href="#" onClick={handleAddFoodClick}>Add Food</a></td>
       </tr>
   );
-}
-calculateTotals() {
+  }
+
+  calculateTotals() {
   let totals = {
     calories: 0,
     carbs: 0,
@@ -92,14 +73,13 @@ calculateTotals() {
     sugar: 0
   };
   for (let meal of this.state.meals) {
-    for (let nutrient in meal) {
-      if (nutrient !== 'mealType') {
-        totals[nutrient] += meal[nutrient];
-      }
-    }
+    Object.keys(totals).forEach(nutrient=>
+      totals[nutrient] += meal[nutrient]
+    )
   }
   return totals;
   }
+
   render() {
     let totals = this.calculateTotals();
     return (
@@ -122,31 +102,12 @@ calculateTotals() {
             {this.state.meals.map(this.renderMealRow)}
             <tr>
               <td>Totals:</td>
-              <td>{totals.calories}</td>
-              <td>{totals.carbs}</td>
+             <td>{totals.calories}</td><td>{totals.carbs}</td>
               <td>{totals.fat}</td>
-              <td>{totals.protein}</td>å
+              <td>{totals.protein}</td>
               <td>{totals.sodium}</td>
               <td>{totals.sugar}</td>
             </tr>
-            <tr>
-              <td>Your Daily Goal:</td>
-              <td>2,770 kcal</td>
-              <td>346 g</td>
-              <td>92 g</td>
-              <td>139 g</td>
-              <td>2,300 mg</td>
-              <td>104g</td>
-            </tr>
-            <tr>
-              <td>Remaining:</td>
-              <td>{0 - totals.calories} kcal</td>
-              <td>{0 - totals.carbs} g</td>
-              <td>{0 - totals.fat} g</td>
-              <td>{0 - totals.protein} g</td>
-              <td>{0 - totals.sodium} mg</td>
-              <td>{0 - totals.sugar}</td>
-              </tr>
           </tbody>
         </table>
       </div>
@@ -154,4 +115,4 @@ calculateTotals() {
   }
 }
 
-export default MealTable
+export default MealTable;
