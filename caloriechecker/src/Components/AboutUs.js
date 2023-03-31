@@ -7,9 +7,7 @@ import "../css/AboutUs.css"
 function About() {
   return (
     <div>
-      <Header />
       <Person />
-      <Footer />
     </div>
   );
 }

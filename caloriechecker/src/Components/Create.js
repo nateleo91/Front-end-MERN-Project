@@ -7,9 +7,7 @@ import "../css/Create.css"
 function Create() {
   return (
     <div>
-      <Header />
       <NutritionInput />
-      <Footer />
     </div>
   );
 }

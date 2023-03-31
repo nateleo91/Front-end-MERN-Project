@@ -13,10 +13,10 @@ function Home(props) {
   const handleSignUp = props.handleSignUp
 
   return (
+
     <div>
       <Header handleInput={handleInput} handleLogIn={handleLogIn} handleSignUp={handleSignUp}/>
       <NutritionTitle />
-      <Footer />
     </div>
   );
 }

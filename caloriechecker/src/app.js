@@ -2,6 +2,10 @@ import Home from './Components/Home'
 import Diary from './Components/Diary'
 import Create from './Components/Create'
 import AboutUs from './Components/AboutUs'
+import Register from './Components/Register'
+import Login from './Components/Login'
+import Header from './Modules/Header'
+import Footer from './Modules/Footer'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -62,14 +66,19 @@ function App() {
   }
 
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home handleInput={handleInput} handleLogIn={handleLogIn} handleSignUp={handleSignUp}/>} />
-        <Route path="/diary" element={<Diary />} />
-        <Route path="/Create" element={<Create />} />
-        <Route path="/AboutUs" element={<AboutUs />} />
-      </Routes>
-    </Router>
+
+    <div>  
+      <Router>
+      <Header />
+        <Routes>
+          <Route path="/" element={<Home handleInput={handleInput} handleLogIn={handleLogIn} handleSignUp={handleSignUp}/>} />
+          <Route path="/diary" element={<Diary />} />
+          <Route path="/Create" element={<Create />} />
+          <Route path="/AboutUs" element={<AboutUs />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </div>
   );
 }
 
