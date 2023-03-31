@@ -26,20 +26,14 @@ function Header() {
   return (
     <div className="buttons">
       <div className="title">
-        <a href='/' className="link"> <h1 className="title">Weightloss Tracker</h1> </a>
+        <a href='/' className="link"> <h1 className="name">CalorieTrakr</h1> </a>
       </div>
       <div className="button-group">
-        <button className="button" onClick={() => navigate('/diary')}>
-          Diary
-        </button>
+        <a href='/diary'> Diary </a>
         |
-        <button className="button" onClick={() => navigate('/create')}>
-          Create
-        </button>
+        <a href='/create'> Create </a>
         |
-        <button className="button" onClick={() => navigate('/AboutUs')}>
-          AboutUs
-        </button>
+        <a href='/AboutUs'> About Us </a>
       </div>
 
       <Button className='sign' variant="primary" onClick={handleShowLoginModal}>
