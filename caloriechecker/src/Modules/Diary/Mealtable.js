@@ -1,5 +1,18 @@
+
+
+
+
+
+
+
+
+
+
+
+
 import React from 'react';
 import "../../css/Mealtable.css";
+import Popup from './popup';
 
 class MealTable extends React.Component {
   constructor() {
@@ -11,7 +24,8 @@ class MealTable extends React.Component {
         { type: 'Lunch', ...this.initNutrientsObject() },
         { type: 'Dinner', ...this.initNutrientsObject() },
         { type: 'Snacks', ...this.initNutrientsObject() }
-      ]
+      ],
+      isOpen: false
     };
   }
   
@@ -26,30 +40,12 @@ class MealTable extends React.Component {
       }
   }
 
+  handleAddFoodClick = () => {
+    this.setState({ isOpen: true });
+  };
+
   renderMealRow(meal) {
-    const handleAddFoodClick = () => {
-      // Open a popup when Add Food is clicked
-      const popupWindow = window.open("path/to/popup.html", "Add Food", "width=400,height=500");
-       // Fetch data from the food database API
-       fetch('https://food-database-api.com/api/foods')
-       .then(response => response.json())
-       .then(data => {
-         // Display the fetched data in the popup
-         const popupContent = `
-           <h2>Select food to add:</h2>
-           <ul>
-             ${data.map(food => `<li>${food.name} (${food.calories} kcal)</li>`).join('')}
-           </ul>
-         `;
-         popupWindow.document.body.innerHTML = popupContent;
-       })
-       .catch(error => {
-         console.error('Error fetching food data:', error);
-         popupWindow.close();
-       });
-   };
-   
-   return (
+    return (
       <tr key={meal.mealType}>
         <td>{meal.type}</td>
         <td>{meal.calories} kcal</td>
@@ -58,26 +54,26 @@ class MealTable extends React.Component {
         <td>{meal.protein} g</td>
         <td>{meal.sodium} mg</td>
         <td>{meal.sugar} g</td>        
-        <td><a href="#" onClick={handleAddFoodClick}>Add Food</a></td>
+        <td><a href="#" onClick={() => this.handleAddFoodClick()}>Add Food</a></td>
       </tr>
-  );
+    );
   }
 
   calculateTotals() {
-  let totals = {
-    calories: 0,
-    carbs: 0,
-    fat: 0,
-    protein: 0,
-    sodium: 0,
-    sugar: 0
-  };
-  for (let meal of this.state.meals) {
-    Object.keys(totals).forEach(nutrient=>
-      totals[nutrient] += meal[nutrient]
-    )
-  }
-  return totals;
+    let totals = {
+      calories: 0,
+      carbs: 0,
+      fat: 0,
+      protein: 0,
+      sodium: 0,
+      sugar: 0
+    };
+    for (let meal of this.state.meals) {
+      Object.keys(totals).forEach(nutrient=>
+        totals[nutrient] += meal[nutrient]
+      )
+    }
+    return totals;
   }
 
   render() {
@@ -85,6 +81,9 @@ class MealTable extends React.Component {
     return (
       <div>
         <h1>Meal Table</h1>
+        
+        {this.state.isOpen && <Popup onClose={() => this.setState({ isOpen: false })} />}
+
         <table>
           <thead>
             <tr>
@@ -99,7 +98,7 @@ class MealTable extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.state.meals.map(this.renderMealRow)}
+            {this.state.meals.map(this.renderMealRow.bind(this))}
             <tr>
               <td>Totals:</td>
              <td>{totals.calories}</td><td>{totals.carbs}</td>
@@ -116,3 +115,4 @@ class MealTable extends React.Component {
 }
 
 export default MealTable;
+

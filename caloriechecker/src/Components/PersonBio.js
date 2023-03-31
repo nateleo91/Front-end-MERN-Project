@@ -14,7 +14,7 @@ export default function Person() {
                     Just a dude from Pennsylvania who likes to code and eat Chocolate.  It is Palmer Chocolate Country up here you know!
                 </p>
                 <a href="https://www.linkedin.com/in/nathen-leonard/"><img src="../images/linkedin-icon.png" /></a>
-                <a href="https://github.com/nateleo91"><img src="../images/github-mark.png" /></a>
+                <a href="https://github.com/nateleo91" ><img src="../images/github-mark.png" /></a>
             </div>
         </div>
     )

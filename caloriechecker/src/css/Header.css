@@ -1,6 +1,19 @@
-.title {
+
+.buttons { 
+  background-color: #a0b0bdc6;
+  display: flex;
+  justify-content: center;
   text-align: center;
-  font-size: 24px !important;
+  height: 50px;
+  position: relative;
+}
+
+
+.name {
+  text-align: left;
+  margin-left: 50px;
+  font-size: 36px !important;
+  position: absolute;
 }
 
 .link {
@@ -8,37 +21,13 @@
   color: black;
 }
 
-.buttons { 
-  background-color: #a0b0bdc6;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  padding: 5px 12px;
-  border: 0;
-  font-size: 14px;
-  margin-top: 5px; 
-}
-
-.button:hover {
-    background-color: #0069d9;
-    cursor: pointer;
-  }
-
 .button-group {
 display: flex;
 justify-content: center;
 align-items: center;
 text-align: center;
 flex-grow: 1;
-display: flex;
+font-size: large;
 }
 
 .sign {
