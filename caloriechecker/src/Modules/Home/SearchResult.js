@@ -4,10 +4,12 @@ import axios from 'axios'
 function SearchResult({ searchResult }) {
 
   /* searchResult.data && searchResult.data.map((food) => {console.log(food._id)}) */
-  function handleNutrition(event) {
-    const foodId = event.target.value
+  async function handleNutrition(event) {
+
+    const foodId = event.target.attributes.value.value
     console.log(foodId)
-   // axios.get("http://localhost:4000/foods/"+ value)
+    const foodNutritionObject =  await axios.get( "http://localhost:4000/foods/" + foodId )
+    console.log(foodNutritionObject)
   }
   return (
     <div className="searchResult">
