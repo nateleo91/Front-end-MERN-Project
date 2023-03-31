@@ -69,7 +69,7 @@ function App() {
 
     <div>  
       <Router>
-      <Header />
+      <Header handleInput={handleInput} handleLogIn={handleLogIn} handleSignUp={handleSignUp}/>
         <Routes>
           <Route path="/" element={<Home handleInput={handleInput} handleLogIn={handleLogIn} handleSignUp={handleSignUp}/>} />
           <Route path="/diary" element={<Diary />} />
