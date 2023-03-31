@@ -71,7 +71,7 @@ function App() {
       <Router>
       <Header handleInput={handleInput} handleLogIn={handleLogIn} handleSignUp={handleSignUp}/>
         <Routes>
-          <Route path="/" element={<Home handleInput={handleInput} handleLogIn={handleLogIn} handleSignUp={handleSignUp}/>} />
+          <Route path="/" element={<Home />} />
           <Route path="/diary" element={<Diary />} />
           <Route path="/Create" element={<Create />} />
           <Route path="/AboutUs" element={<AboutUs />} />
