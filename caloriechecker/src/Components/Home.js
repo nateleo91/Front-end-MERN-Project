@@ -24,10 +24,8 @@ function Home() {
   };
 
   return (
-    <div>
-      <Header />
+    <div>  
       <NutritionTitle />
-      <Footer />
     </div>
   );
 }
