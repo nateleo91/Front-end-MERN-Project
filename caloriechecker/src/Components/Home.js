@@ -7,25 +7,14 @@ import NutritionTitle from "../Modules/Home/NutritionTitle";
 import axios from "axios";
 import "../css/Home.css";
 
-function Home() {
-  const [searchResult, setSearchResult] = useState([]);
-
-  const handleSearchQuery = async (searchText) => {
-    // TODO: Implement search functionality here and update searchResult state
-    /* setSearchResult([{food_id: 1, brand_type: 'Brand A'}, {food_id: 2, brand_type: 'Brand B'}]); */
-    await axios.get("http://localhost:4000/foods/searchFood?food=" + searchText)
-      .then((res) => {
-        console.log(res)
-        setSearchResult(res);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+function Home(props) {
+  const handleInput = props.handleInput
+  const handleLogIn = props.handleLogIn
+  const handleSignUp = props.handleSignUp
 
   return (
     <div>
-      <Header />
+      <Header handleInput={handleInput} handleLogIn={handleLogIn} handleSignUp={handleSignUp}/>
       <NutritionTitle />
       <Footer />
     </div>

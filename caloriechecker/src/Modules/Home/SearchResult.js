@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 function SearchResult({ searchResult }) {
+
   
   return (
     <div className="searchResult">
