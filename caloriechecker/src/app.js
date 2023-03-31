@@ -17,6 +17,7 @@ function App() {
   const [user, setUser] = useState({
     email: '',
     password: '',
+    retypePassword: '',
     isLoggedIn: false
   })
 
@@ -26,23 +27,30 @@ function App() {
       ...user,
       [e.target.name]: e.target.value
     })
+    console.log(user.email, user.password)
   }
   async function handleSignUp(e) {
+    console.log(user.email, user.password, user.retypePassword)
     e.preventDefault()
-    await axios.post("http://localhost:4000/users/signup", {
-      //Change url on deployment
-      email: user.email,
-      password: user.password
-    })
-    .then( res => {
-      localStorage.token = res.data.token
-      setUser({ isLoggedIn: true })
-    })
-    .catch(error => console.log(error))
+    if(user.password === user.retypePassword){
+      await axios.post("http://localhost:4000/users/signup", {
+        //Change url on deployment
+        email: user.email,
+        password: user.password
+      })
+      .then( res => {
+        localStorage.token = res.data.token
+        setUser({ isLoggedIn: true })
+      })
+      .catch(error => console.log(error))
+    } else {
+      console.log("password don't match")
+      //make passwords dont match a popup alerting of mismatched password
+    }
   }
 
   async function handleLogIn(e) {
-    console.log(user.email, user.password)
+
     e.preventDefault()
     await axios.post("http://localhost:4000/users/login",{
       //change url on deployment
@@ -58,23 +66,19 @@ function App() {
   }
 
   return (
-    <div>
-      
+
+    <div>  
       <Router>
       <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home handleInput={handleInput} handleLogIn={handleLogIn} handleSignUp={handleSignUp}/>} />
           <Route path="/diary" element={<Diary />} />
           <Route path="/Create" element={<Create />} />
           <Route path="/AboutUs" element={<AboutUs />} />
-          <Route path="/Register" element={<Register handleInput={handleInput} handleSignUp={handleSignUp}/>} />
-          <Route path="/Login" element={<Login handleInput={handleInput} handleLogIn={handleLogIn} />} />
         </Routes>
         <Footer />
       </Router>
     </div>
-     
-      
   );
 }
 

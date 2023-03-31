@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import SearchBar from './SearchBar';
 import SearchResult from './SearchResult';
+import axios from 'axios';
 
 function NutritionFacts() {
+
+  
   const [value, setValue] = useState('');
   const [selectedOption, setSelectedOption] = useState('option1');
   const [searchResult, setSearchResult] = useState([]);
@@ -15,11 +18,17 @@ function NutritionFacts() {
     setSelectedOption(event.target.value);
   }
 
-  function handleSearchQuery(query) {
-    // Make an API call to get the search result based on the query
-    // Store the result in the searchResult state variable
-    setSearchResult(searchResult);
-  }
+  const handleSearchQuery = async (searchText) => {
+    // TODO: Implement search functionality here and update searchResult state
+    /* setSearchResult([{food_id: 1, brand_type: 'Brand A'}, {food_id: 2, brand_type: 'Brand B'}]); */
+    await axios.get("http://localhost:4000/foods/searchFood?food=" + searchText)
+      .then((res) => {
+        setSearchResult(res);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   
   return (
