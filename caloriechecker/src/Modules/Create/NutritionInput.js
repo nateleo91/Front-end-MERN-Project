@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import '../../css/Create.css'
 
 function NutritionInput() {
 	const [nutritionInputs, setNutritionInputs] = useState({
-		name: '',
+		food_name: '',
 		calories: '',
-		totalFat: '',
+		Fat: '',
 		saturatedFat: '',
 		polyunsaturatedFat: '',
 		monounsaturatedFat: '',
 		transFat: '',
 		cholesterol: '',
 		sodium: '',
-		totalCarbs: '',
-		dietaryFiber: '',
-		sugars: '',
+		carbohydrate: '',
+		fiber: '',
+		sugar: '',
 		protein: ''
 	  });
 	
@@ -24,22 +25,26 @@ function NutritionInput() {
 		  ...prev,
 		  [name]: value,
 		}));
+		console.log(nutritionInputs)
 	  };
 	  
-	  const handleSubmit = (event) => {
+	  const handleSubmit = async (event) => {
 		event.preventDefault();
-		// TODO: Handle form submission
+		await axios.post("http://localhost:4000/foods/addFood", nutritionInputs)
+		.then((res) => {
+			console.log(res)
+		})
 	  };
 	  
-	  const { name, calories, totalFat, saturatedFat, polyunsaturatedFat, monounsaturatedFat, transFat, cholesterol, sodium, totalCarbs, dietaryFiber, sugars, protein } = nutritionInputs;	
+	  const { food_name, calories, totalFat, saturatedFat, polyunsaturatedFat, monounsaturatedFat, transFat, cholesterol, sodium, carbohydrate, fiber, sugar, protein } = nutritionInputs;	
 	
 	  return(
 		<div className="Create">
 		<h2>Enter Nutritional Information</h2>
 
 		<form className="createForm" onSubmit={handleSubmit}>
-    <label htmlFor="name-input">Name:</label>
-    <input type="text" id="name-input" name="name" value={name} onChange={handleInputChange} />
+    <label htmlFor="name-input">Food name:</label>
+    <input type="text" id="name-input" name="food_name" value={food_name} onChange={handleInputChange} />
 	<label htmlFor="calories-input">Calories:</label>
 <input type="number" className="numInput" id="calories-input" name="calories" value={calories} onChange={handleInputChange} step="1" />
 <label id="createLabel" htmlFor="total-fat-input">Total Fat:</label>
@@ -57,11 +62,11 @@ function NutritionInput() {
 <label id="createLabel" htmlFor="sodium-input">Sodium:</label>
 <input type="number" className="numInput" id="sodium-input" name="sodium" value={sodium} onChange={handleInputChange} step="1" />
 <label id="createLabel" htmlFor="total-carbs-input">Total Carbohydrates:</label>
-<input type="number" className="numInput" id="total-carbs-input" name="totalCarbs" value={totalCarbs} onChange={handleInputChange} step="1" />
+<input type="number" className="numInput" id="total-carbs-input" name="carbohydrate" value={carbohydrate} onChange={handleInputChange} step="1" />
 <label id="createLabel" htmlFor="dietary-fiber-input">Dietary Fiber:</label>
-<input type="number" className="numInput" id="dietary-fiber-input" name="dietaryFiber" value={dietaryFiber} onChange={handleInputChange} step="1" />
+<input type="number" className="numInput" id="dietary-fiber-input" name="fiber" value={fiber} onChange={handleInputChange} step="1" />
 <label id="createLabel" htmlFor="sugars-input">Sugars:</label>
-<input type="number" className="numInput" id="sugars-input" name="sugars" value={sugars} onChange={handleInputChange} step="1" />
+<input type="number" className="numInput" id="sugars-input" name="sugar" value={sugar} onChange={handleInputChange} step="1" />
 <label id="createLabel" htmlFor="protein-input">Protein:</label>
 <input type="number" className="numInput" id="protein-input" name="protein" value={protein} onChange={handleInputChange} step="1" />
 <button className="submit" type="submit">Submit</button>

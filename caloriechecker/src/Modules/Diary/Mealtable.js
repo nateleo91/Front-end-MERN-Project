@@ -23,7 +23,7 @@ class MealTable extends React.Component {
         { type: 'Breakfast', ...this.initNutrientsObject() },
         { type: 'Lunch', ...this.initNutrientsObject() },
         { type: 'Dinner', ...this.initNutrientsObject() },
-        { type: 'Snacks', ...this.initNutrientsObject() }
+        { type: 'Snacks', ...this.initNutrientsObject() },
       ],
       isOpen: false
     };
@@ -101,7 +101,8 @@ class MealTable extends React.Component {
             {this.state.meals.map(this.renderMealRow.bind(this))}
             <tr>
               <td>Totals:</td>
-             <td>{totals.calories}</td><td>{totals.carbs}</td>
+              <td>{totals.calories}</td>
+              <td>{totals.carbs}</td>
               <td>{totals.fat}</td>
               <td>{totals.protein}</td>
               <td>{totals.sodium}</td>
