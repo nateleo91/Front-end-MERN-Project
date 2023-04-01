@@ -84,7 +84,7 @@ class MealTable extends React.Component {
         
         {this.state.isOpen && <Popup onClose={() => this.setState({ isOpen: false })} />}
 
-        <table>
+        <table className= "mealTable">
           <thead>
             <tr>
               <th>Meal Type</th>

@@ -61,12 +61,12 @@ function NutritionFacts() {
         <SearchResult searchResult={searchResult} setNutritionInfo={setNutritionInfo}/>
       </div>
       
-    <div>
+    <div className="right">
     <h2 className="nutritionTitle">Nutrition Facts</h2>
         <label htmlFor="number-input" className="servings">
           Servings:
         </label>
-        <input
+        <input className="nutInput"
           type="number"
           step="0.01"
           id="number-input"
@@ -85,7 +85,7 @@ function NutritionFacts() {
         </select>
 
         <div className="nutritionInfo">
-            <table>
+            <table className="nutInfo">
             <tbody>
             <tr>
             <td class="col-1">Calories</td>

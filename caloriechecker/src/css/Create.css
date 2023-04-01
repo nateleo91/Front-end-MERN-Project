@@ -17,8 +17,8 @@
     padding: 8px;
     width: auto;
 }
-  input[type='text'],
-  input[type='number'] {
+  #nameInput,
+  .numInput {
     width: 55px;
     padding: 5px;
     border-radius: 3px;
@@ -27,13 +27,13 @@
     box-sizing: border-box;
   }
   
-  label {
+  .createLabel {
     font-size: 14px;
     font-weight: bold;
     margin-right: 7px;
   }
   
-  form {
+  .createForm {
     display: grid;
     grid-template-columns: 0.8fr 2fr;
     gap: 10px;
