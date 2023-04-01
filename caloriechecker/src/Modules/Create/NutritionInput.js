@@ -6,11 +6,11 @@ function NutritionInput() {
 	const [nutritionInputs, setNutritionInputs] = useState({
 		food_name: '',
 		calories: '',
-		Fat: '',
-		saturatedFat: '',
-		polyunsaturatedFat: '',
-		monounsaturatedFat: '',
-		transFat: '',
+		totalFat: '',
+		iron: '',
+		vitamin_a: '',
+		vitamin_c: '',
+		calcium: '',
 		cholesterol: '',
 		sodium: '',
 		carbohydrate: '',
@@ -36,7 +36,7 @@ function NutritionInput() {
 		})
 	  };
 	  
-	  const { food_name, calories, totalFat, saturatedFat, polyunsaturatedFat, monounsaturatedFat, transFat, cholesterol, sodium, carbohydrate, fiber, sugar, protein } = nutritionInputs;	
+	  const { food_name, calories, totalFat, iron, vitamin_a, vitamin_c, calcium, cholesterol, sodium, carbohydrate, fiber, sugar, protein } = nutritionInputs;	
 	
 	  return(
 		<div className="Create">
@@ -47,27 +47,27 @@ function NutritionInput() {
 				<input type="text" id="name-input" name="food_name" value={food_name} onChange={handleInputChange} />
 			<label htmlFor="calories-input">Calories:</label>
 				<input type="text" className="numInput" id="calories-input" name="calories" value={calories} onChange={handleInputChange} step="1" />
-			<label id="createLabel" htmlFor="total-fat-input">Total Fat:</label>
+			<label id="createLabel" htmlFor="total-fat-input">Total Fat (g):</label>
 				<input type="text" className="numInput" id="total-fat-input" name="totalFat" value={totalFat} onChange={handleInputChange} step="1" />
-			<label id="createLabel" htmlFor="saturated-input">Saturated Fat:</label>
-				<input type="text" className="numInput" id="saturated-input" name="saturatedFat" value={saturatedFat} onChange={handleInputChange} step="1" />
-			<label id="createLabel" htmlFor="polyunsaturated-input">Polyunsaturated Fat:</label>
-				<input type="text" className="numInput" id="polyunsaturated-input" name="polyunsaturatedFat" value={polyunsaturatedFat} onChange={handleInputChange} step="1" />
-			<label id="createLabel" htmlFor="monounsaturated-input">Monounsaturated Fat:</label>
-				<input type="text" className="numInput" id="monounsaturated-input" name="monounsaturatedFat" value={monounsaturatedFat} onChange={handleInputChange} step="1" />
-			<label id="createLabel" htmlFor="trans-input">Trans Fat:</label>
-				<input type="text" className="numInput" id="trans-input" name="transFat" value={transFat} onChange={handleInputChange} step="1" />
-			<label id="createLabel" htmlFor="cholesterol-input">Cholesterol:</label>
+			<label id="createLabel" htmlFor="saturated-input">Iron (%):</label>
+				<input type="text" className="numInput" id="saturated-input" name="iron" value={iron} onChange={handleInputChange} step="1" />
+			<label id="createLabel" htmlFor="polyunsaturated-input">Vitamin A (%):</label>
+				<input type="text" className="numInput" id="polyunsaturated-input" name="vitamin_a" value={vitamin_a} onChange={handleInputChange} step="1" />
+			<label id="createLabel" htmlFor="monounsaturated-input">Vitamin C (%):</label>
+				<input type="text" className="numInput" id="monounsaturated-input" name="vitamin_c" value={vitamin_c} onChange={handleInputChange} step="1" />
+			<label id="createLabel" htmlFor="trans-input">Calcium (%):</label>
+				<input type="text" className="numInput" id="trans-input" name="calcium" value={calcium} onChange={handleInputChange} step="1" />
+			<label id="createLabel" htmlFor="cholesterol-input">Cholesterol (mg):</label>
 				<input type="text" className="numInput" id="cholesterol-input" name="cholesterol" value={cholesterol} onChange={handleInputChange} step="1" />
-			<label id="createLabel" htmlFor="sodium-input">Sodium:</label>
+			<label id="createLabel" htmlFor="sodium-input">Sodium (mg):</label>
 				<input type="text" className="numInput" id="sodium-input" name="sodium" value={sodium} onChange={handleInputChange} step="1" />
-			<label id="createLabel" htmlFor="total-carbs-input">Total Carbohydrates:</label>
+			<label id="createLabel" htmlFor="total-carbs-input">Total Carbohydrates (g):</label>
 				<input type="text" className="numInput" id="total-carbs-input" name="carbohydrate" value={carbohydrate} onChange={handleInputChange} step="1" />
-			<label id="createLabel" htmlFor="dietary-fiber-input">Dietary Fiber:</label>
+			<label id="createLabel" htmlFor="dietary-fiber-input">Dietary Fiber (g):</label>
 				<input type="text" className="numInput" id="dietary-fiber-input" name="fiber" value={fiber} onChange={handleInputChange} step="1" />
-			<label id="createLabel" htmlFor="sugars-input">Sugars:</label>
+			<label id="createLabel" htmlFor="sugars-input">Sugars (g):</label>
 				<input type="text" className="numInput" id="sugars-input" name="sugar" value={sugar} onChange={handleInputChange} step="1" />
-			<label id="createLabel" htmlFor="protein-input">Protein:</label>
+			<label id="createLabel" htmlFor="protein-input">Protein (g):</label>
 				<input type="text" className="numInput" id="protein-input" name="protein" value={protein} onChange={handleInputChange} step="1" />
 			<button className="submit" type="submit">Submit</button>
 		</form>
