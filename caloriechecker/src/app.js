@@ -16,6 +16,8 @@ function App() {
     email: '',
     password: '',
     retypePassword: '',
+    user_firstname: '',
+    user_lastname: '',
     isLoggedIn: false
   })
 
@@ -28,17 +30,19 @@ function App() {
     console.log(user.email, user.password)
   }
   async function handleSignUp(e) {
-    console.log(user.email, user.password, user.retypePassword)
     e.preventDefault()
     if(user.password === user.retypePassword){
       await axios.post("http://localhost:4000/users/signup", {
         //Change url on deployment
         email: user.email,
-        password: user.password
+        password: user.password,
+        user_firstname: user.user_firstname,
+        user_lastname: user.user_lastname      
       })
       .then( res => {
         localStorage.token = res.data.token
         setUser({ isLoggedIn: true })
+        console.log("signed up!")
       })
       .catch(error => console.log(error))
     } else {
