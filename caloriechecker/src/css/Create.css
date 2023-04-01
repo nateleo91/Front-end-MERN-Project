@@ -19,7 +19,7 @@
 }
   #nameInput,
   .numInput {
-    width: 55px;
+    width: 100px;
     padding: 5px;
     border-radius: 3px;
     border: 1px solid #ccc;
