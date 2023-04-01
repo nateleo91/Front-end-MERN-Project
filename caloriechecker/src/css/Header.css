@@ -1,5 +1,5 @@
 
-.buttons { 
+.headerButtons { 
   background-color: #a0b0bdc6;
   display: flex;
   justify-content: center;
@@ -16,6 +16,25 @@
   position: absolute;
 }
 
+.name {
+  transition: font-size 0.5s ease;
+}
+
+.name:hover {
+  font-size: 40px !important;
+  color: #0077cc
+}
+
+.title {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.title h1 {
+  color: #222;
+  font-size: 10px;
+}
+
 .link {
   text-decoration: none;
   color: black;
@@ -26,13 +45,37 @@ display: flex;
 justify-content: center;
 align-items: center;
 text-align: center;
-flex-grow: 1;
-font-size: large;
+flex-grow: 1.5;
+height: 50px;
+}
+
+.headerTabs {
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1;
+  font-size: 20px;
+  height: 50px;
+}
+
+.headerTabs {
+  background-image: linear-gradiant(to bottom, #f2f2f2, #ddd);
+  background-size: 100% 200%;
+  background-position: top;
+  transition: background-color 0.5s ease;
+  transition: font-size 0.5s ease;
+}
+
+.headerTabs:hover {
+  font-size: 22px;
+  background-color: #0077cc;
+  color: white;
 }
 
 .sign {
-  background-color: #a0b0bdc6;
-  border: none;
+  background-color: #007bff;
   font: inherit;
   font-family: 'Montserrat', sans-serif;
   text-decoration: underline;

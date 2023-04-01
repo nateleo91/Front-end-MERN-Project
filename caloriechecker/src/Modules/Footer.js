@@ -23,14 +23,14 @@ function Footer() {
       <footer>
         <div className="footer-container">
           <div className="buttons-container">
-            <button><a href="/" className="link">
-            Weightloss Tracker</a></button>
-            <button><a className="link">{('blogs')}</a></button>
-            <button><a className="link">{('terms')}</a></button>
-            <button><a className="link">{('privacy')}</a></button>
-            <button><a className="link">{('contact')}</a></button>
-            <button><a className="link">{('feedback')}</a></button>
-            <button><a className="link">{('community')}</a></button>
+            <a href="/" className="link">
+            CalorieTrakr</a>
+            <a className="link">{('blogs')}</a>
+            <a className="link">{('terms')}</a>
+            <a className="link">{('privacy')}</a>
+            <a className="link">{('contact')}</a>
+            <a className="link">{('feedback')}</a>
+            <a className="link">{('community')}</a>
           </div>
           <div className="language-container">
             <Select

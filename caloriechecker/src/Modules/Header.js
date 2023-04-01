@@ -28,16 +28,14 @@ function Header(props) {
   };
 
   return (
-    <div className="buttons">
+    <div className="headerButtons">
       <div className="title">
         <a href='/' className="link"> <h1 className="name">CalorieTrakr</h1> </a>
       </div>
       <div className="button-group">
-        <a href='/diary'> Diary </a>
-        |
-        <a href='/create'> Create </a>
-        |
-        <a href='/AboutUs'> About Us </a>
+        <a className="headerTabs" href='/diary'> Diary </a>
+        <a className="headerTabs" href='/create'> Create </a>
+        <a className="headerTabs" href='/AboutUs'> About Us </a>
       </div>
 
       <Button className='sign' variant="primary" onClick={handleShowLoginModal}>
