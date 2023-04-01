@@ -36,6 +36,7 @@ function Footer() {
             <Select
               options={languages}
               value={selectedLanguage}
+              placeholder="language"
               onChange={handleLanguageChange}
             />
           </div>

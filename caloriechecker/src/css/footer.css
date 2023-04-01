@@ -44,8 +44,11 @@ footer {
   }
   
   .language-container {
-    width: 200px; /* set a fixed width to make the container smaller */
-    margin: 0 auto; /* center the container horizontally */
+    width: 200px;
+    height: 40px;
+    margin: 0 auto;
+    margin-right: 20px;
+    border: 1px solid black;
   }
   
   /* Apply some default styles to the Select component */

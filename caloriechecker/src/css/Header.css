@@ -22,7 +22,7 @@
 
 .name:hover {
   font-size: 40px !important;
-  color: #0077cc
+  color: #0077cc;
 }
 
 .title {
@@ -58,14 +58,17 @@ height: 50px;
   flex-grow: 1;
   font-size: 20px;
   height: 50px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
 }
 
 .headerTabs {
-  background-image: linear-gradiant(to bottom, #f2f2f2, #ddd);
+  background-image: linear-gradient(to bottom, #a0b0bdc6, #a0b0bdc6);
   background-size: 100% 200%;
   background-position: top;
-  transition: background-color 0.5s ease;
-  transition: font-size 0.5s ease;
+  transition: background-color 0.7s ease;
+  transition: font-size 0.7s ease;
 }
 
 .headerTabs:hover {
@@ -86,4 +89,13 @@ height: 50px;
 .login-modal {
   display: flex;
   justify-content: center;
+}
+
+.loginButtons {
+  padding: 10px;
+  font: inherit;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: auto;
 }

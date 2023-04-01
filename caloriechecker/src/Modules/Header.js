@@ -12,7 +12,7 @@ function Header(props) {
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showSignUpModal, setShowSignUpModal] = useState(false);
 
-  const handleShowLoginModal = () => setShowLoginModal(true);
+  const handleShowLoginModal = () => { setShowLoginModal(true); setShowSignUpModal(false); }
   const handleCloseLoginModal = () => setShowLoginModal(false);
   const handleShowSignUpModal = () => { setShowSignUpModal(true); setShowLoginModal(false); }
   const handleCloseSignUpModal = () => setShowSignUpModal(false);
@@ -44,7 +44,7 @@ function Header(props) {
 
       <Modal show={showLoginModal} onHide={handleCloseLoginModal} className="login-modal">
         <Modal.Header closeButton>
-          <Modal.Title>Weightloss Login</Modal.Title>
+          <Modal.Title>CalorieTrakr Login</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
@@ -57,13 +57,14 @@ function Header(props) {
               <Form.Label>Password</Form.Label>
               <Form.Control type="password" name="password" placeholder="Password" onChange={handleInput} />
             </Form.Group>
-
-            <Button variant="primary" type="submit" onClick={handleLogIn}>
+          <div className="loginButtons">
+            <Button className="sign" variant="primary" type="submit" onClick={handleLogIn}>
               Sign In
             </Button>
-            <Button variant="Secondary" type="button" onClick={handleShowSignUpModal}>
+            <Button className="sign" variant="Secondary" type="button" onClick={handleShowSignUpModal}>
               Sign Up
             </Button>
+          </div>
           </Form>
         </Modal.Body>
         <Modal.Footer>
@@ -73,9 +74,9 @@ function Header(props) {
         </Modal.Footer>
       </Modal>
 
-      <Modal show={showSignUpModal} onHide={handleCloseSignUpModal}>
+      <Modal show={showSignUpModal} onHide={handleCloseSignUpModal} className="signupModal">
         <Modal.Header closeButton>
-          <Modal.Title>Weightloss SignUp</Modal.Title>
+          <Modal.Title>CalorieTrakr SignUp</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
@@ -94,8 +95,21 @@ function Header(props) {
               <Form.Control type="password" name="retypePassword" placeholder="Confirm Password" onChange={handleInput} />
             </Form.Group>
 
+            <Form.Group controlId="formFirstName">
+              <Form.Label>First Name</Form.Label>
+              <Form.Control type="firstName" name="firstName" placeholder="First Name" onChange={handleInput} />
+            </Form.Group>
+
+            <Form.Group controlId="formLastName">
+              <Form.Label>Last Name</Form.Label>
+              <Form.Control type="lastName" name="lastName" placeholder="Last Name" onChange={handleInput} />
+            </Form.Group>
+
             <Button variant="primary" type="submit" onClick={handleSignUp}>
               Create Account
+            </Button>
+            <Button variant="Secondary" type="button" onClick={handleShowLoginModal}>
+              SignIn
             </Button>
           </Form>
         </Modal.Body>
