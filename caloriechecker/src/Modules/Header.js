@@ -97,12 +97,12 @@ function Header(props) {
 
             <Form.Group controlId="formFirstName">
               <Form.Label>First Name</Form.Label>
-              <Form.Control type="firstName" name="firstName" placeholder="First Name" onChange={handleInput} />
+              <Form.Control type="firstName" name="user_firstname" placeholder="First Name" onChange={handleInput} />
             </Form.Group>
 
             <Form.Group controlId="formLastName">
               <Form.Label>Last Name</Form.Label>
-              <Form.Control type="lastName" name="lastName" placeholder="Last Name" onChange={handleInput} />
+              <Form.Control type="lastName" name="user_lastname" placeholder="Last Name" onChange={handleInput} />
             </Form.Group>
 
             <Button variant="primary" type="submit" onClick={handleSignUp}>
