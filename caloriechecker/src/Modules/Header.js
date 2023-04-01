@@ -58,7 +58,7 @@ function Header(props) {
               <Form.Control type="password" name="password" placeholder="Password" onChange={handleInput} />
             </Form.Group>
           <div className="loginButtons">
-            <Button className="sign" variant="primary" type="submit" onClick={handleLogIn}>
+            <Button className="sign" variant="primary" type="submit" onClick={() => {handleLogIn(); handleCloseLoginModal();}}>
               Sign In
             </Button>
             <Button className="sign" variant="Secondary" type="button" onClick={handleShowSignUpModal}>
@@ -105,7 +105,7 @@ function Header(props) {
               <Form.Control type="lastName" name="user_lastname" placeholder="Last Name" onChange={handleInput} />
             </Form.Group>
 
-            <Button variant="primary" type="submit" onClick={handleSignUp}>
+            <Button variant="primary" type="submit" onClick={() => {handleSignUp(); handleCloseSignUpModal();}}>
               Create Account
             </Button>
             <Button variant="Secondary" type="button" onClick={handleShowLoginModal}>
