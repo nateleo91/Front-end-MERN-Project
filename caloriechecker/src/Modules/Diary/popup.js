@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SearchBar from '../../Modules/Home/SearchBar';
-import SearchResult from '../../Modules/Home/SearchResult';
+import PopupResults from './popupResults';
+import axios from 'axios';
 
 
 
@@ -13,13 +14,20 @@ function Popup() {
     const [searchResult, setSearchResult] = useState({});
   
     const handleSearchQuery = async (searchText) => {
-      // ...
+
+      await axios.get("http://localhost:4000/foods/searchFood?food=" + searchText)
+        .then((res) => {
+          setSearchResult(res);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     };
   
     return (
       <div className="popup">
         <SearchBar handleSearchQuery={handleSearchQuery} />
-        <SearchResult searchResult={searchResult} />
+        <PopupResults searchResult={searchResult} />
       </div>
     );
   }
