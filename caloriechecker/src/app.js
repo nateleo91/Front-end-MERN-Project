@@ -27,7 +27,6 @@ function App() {
       ...user,
       [e.target.name]: e.target.value
     })
-    console.log(user.email, user.password)
   }
   async function handleSignUp(e) {
     e.preventDefault()
