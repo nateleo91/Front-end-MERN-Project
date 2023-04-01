@@ -89,55 +89,56 @@ function NutritionFacts() {
             <tbody>
             <tr>
             <td class="col-1">Calories</td>
-            <td class="col-2">{`${nutritionInfo.calories}`}</td>
+            <td class="col-2">{`${nutritionInfo.calories || 0}`}</td>
             <td class="col-1">Sodium</td>
-            <td class="col-2">{`${nutritionInfo.sodium}`}mg</td>
+            <td class="col-2">{`${nutritionInfo.sodium || 0}`}mg</td>
             </tr>
             <tr>
             <td class="col-1">Total Fat</td>
             <td class="col-2">0g</td>
             <td class="col-1">Potassium</td>
-            <td class="col-2">{`${nutritionInfo.potassium}`}mg</td>
+            <td class="col-2">{`${nutritionInfo.potassium || 0}`}mg</td>
             </tr>
             <tr>
             <td class="col-1 sub">Saturated</td>
-            <td class="col-2">{`${nutritionInfo.saturated_fat}`}g</td>
+            <td class="col-2">{`${nutritionInfo.saturated_fat || 0}`}g</td>
             <td class="col-1">Total Carbs</td>
-            <td class="col-2">{`${nutritionInfo.carbohydrate}`}g</td>
+            <td class="col-2">{`${nutritionInfo.carbohydrate || 0}`}g</td>
             </tr>
             <tr>
             <td class="col-1">Dietary Fiber</td>
-            <td class="col-2">{`${nutritionInfo.fiber}`}g</td>
+            <td class="col-2">{`${nutritionInfo.fiber || 0}`}g</td>
             <td class="col-1">Sugars</td>
-            <td class="col-2">{`${nutritionInfo.sugar}`}g</td>
+            <td class="col-2">{`${nutritionInfo.sugar || 0}`}g</td>
             </tr>
             <tr>
             <td class="col-1 sub">Trans</td>
-            <td class="col-2">{nutritionInfo.trans_fat}g</td>
+            <td class="col-2">{nutritionInfo.trans_fat || 0}g</td>
             <td class="col-1">Protein</td>
-            <td class="col-2">{`${nutritionInfo.protein}`}g</td>
+            <td class="col-2">{`${nutritionInfo.protein || 0}`}g</td>
             </tr>
             <tr class="last">
-			<td class="col-1">Cholesterol</td>
-			<td class="col-2">{`${nutritionInfo.cholesterol}`}mg</td>
-			<td class="col-1">&nbsp;</td>
-			<td class="col-2">&nbsp;</td>
-		</tr>
-        <tr class="alt">
-			<td class="col-1">Vitamin A</td>
-			<td class="col-2">{`${nutritionInfo.vitamin_a}`}%</td>
-			<td class="col-1">Calcium</td>
-			<td class="col-2">{`${nutritionInfo.calcium}`}%</td>
-		</tr>
-        <tr class="last">
-			<td class="col-1">Vitamin C</td>
-			<td class="col-2">{`${nutritionInfo.vitamin_c}`}%</td>
-			<td class="col-1">Iron</td>
-			<td class="col-2">{`${nutritionInfo.iron}`}%</td>
-		</tr>
+			      <td class="col-1">Cholesterol</td>
+			      <td class="col-2">{`${nutritionInfo.cholesterol || 0}`}mg</td>
+			      <td class="col-1">&nbsp;</td>
+			      <td class="col-2">&nbsp;</td>
+		        </tr>
+            <br />
+            <tr class="alt">
+			      <td class="col-1">Vitamin A</td>
+			      <td class="col-2">{`${nutritionInfo.vitamin_a || 0}`}%</td>
+			      <td class="col-1">Calcium</td>
+			      <td class="col-2">{`${nutritionInfo.calcium || 0}`}%</td>
+		        </tr>
+            <tr class="last">
+			      <td class="col-1">Vitamin C</td>
+			      <td class="col-2">{`${nutritionInfo.vitamin_c || 0}`}%</td>
+			      <td class="col-1">Iron</td>
+			      <td class="col-2">{`${nutritionInfo.iron || 0}`}%</td>
+		        </tr>
         </tbody>
-        </table>
-        </div>
+      </table>
+    </div>
   </div>
   </div>
   );
