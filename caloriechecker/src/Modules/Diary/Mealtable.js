@@ -1,15 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
 import React from 'react';
 import "../../css/Mealtable.css";
 import Popup from './popup';

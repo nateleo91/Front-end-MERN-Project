@@ -62,7 +62,7 @@ function NutritionFacts() {
         </label>
         <input className="nutInput"
           type="number"
-          step="0.01"
+          step="0.25"
           id="number-input"
           value={value}
           onChange={handleInputChange}
@@ -123,6 +123,7 @@ function NutritionFacts() {
         </tbody>
       </table>
     </div>
+    <button> delete </button>
   </div>
   </div>
   );
