@@ -55,7 +55,7 @@ function NutritionInput() {
 				<input type="text" className="numInput" id="polyunsaturated-input" name="vitamin_a" value={vitamin_a} onChange={handleInputChange} step="1" />
 			<label id="createLabel" htmlFor="monounsaturated-input">Vitamin C (%):</label>
 				<input type="text" className="numInput" id="monounsaturated-input" name="vitamin_c" value={vitamin_c} onChange={handleInputChange} step="1" />
-			<label id="createLabel" htmlFor="trans-input">Calcium (%):</label>
+			<label id="createLabel" htmlFor="trans-input">Calcium (mg):</label>
 				<input type="text" className="numInput" id="trans-input" name="calcium" value={calcium} onChange={handleInputChange} step="1" />
 			<label id="createLabel" htmlFor="cholesterol-input">Cholesterol (mg):</label>
 				<input type="text" className="numInput" id="cholesterol-input" name="cholesterol" value={cholesterol} onChange={handleInputChange} step="1" />
