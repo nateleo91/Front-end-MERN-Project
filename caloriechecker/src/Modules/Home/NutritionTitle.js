@@ -20,7 +20,8 @@ function NutritionFacts() {
 
   const handleSearchQuery = async (searchText) => {
 
-    await axios.get("http://localhost:4000/foods/searchFood?food=" + searchText)
+    await axios.get("https://calorie-trakr.herokuapp.com/foods/searchFood?food=" + searchText)
+    // changed url for deployment
       .then((res) => {
         setSearchResult(res);
       })

@@ -30,8 +30,8 @@ function App() {
   }
   async function handleSignUp() {
     if(user.password === user.retypePassword){
-      await axios.post("http://localhost:4000/users/signup", {
-        //Change url on deployment
+      await axios.post("https://calorie-trakr.herokuapp.com/users/signup", {
+        //Change url on deployment Original is localhost 4000
         email: user.email,
         password: user.password,
         user_firstname: user.user_firstname,
@@ -51,7 +51,7 @@ function App() {
 
   async function handleLogIn() {
 
-    await axios.post("http://localhost:4000/users/login",{
+    await axios.post("https://calorie-trakr.herokuapp.com/users/login",{
       //change url on deployment
       email: user.email,
       password: user.password

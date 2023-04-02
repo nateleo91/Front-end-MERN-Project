@@ -30,7 +30,8 @@ function NutritionInput() {
 	  
 	  const handleSubmit = async (event) => {
 		event.preventDefault();
-		await axios.post("http://localhost:4000/foods/addFood", nutritionInputs)
+		await axios.post("https://calorie-trakr.herokuapp.com/foods/addFood", nutritionInputs)
+		//changed url for deployment
 		.then((res) => {
 			console.log(res)
 		})
