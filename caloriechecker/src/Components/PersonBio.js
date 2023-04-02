@@ -16,8 +16,8 @@ function Person(props) {
         <div className="profileTxt">
           <h3>{name}</h3>
           <p className="bio">{bio}</p>
-          <a href={linkedin}><img src="../images/linkedin-icon.png" alt="LinkedIn" /></a>
-          <a href={github}><img src="../images/github-mark.png" alt="GitHub" /></a>
+          <a href={linkedin} target='_blank'><img src="../images/linkedin-icon.png" alt="LinkedIn" /></a>
+          <a href={github} target='_blank'><img src="../images/github-mark.png" alt="GitHub" /></a>
         </div>
       </div>
     );
