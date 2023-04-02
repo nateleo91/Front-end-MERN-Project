@@ -1,22 +1,43 @@
 import React from "react";
 import '../css/PersonBio.css'
+import People from '../Data/AboutUs.json'
+
+const team = People
 
 
-export default function Person() {
+function Person(props) {
+    const { image_src, name, bio, linkedin, github } = props;
+  
     return (
-        <div className="container">
-            <div className="profileImg">
-                 <img className="image" src="../images/Nate_uniform.jpeg" alt="profile picture" />
-            </div>
-            <div className="profileTxt">
-                <h3>Nate Leonard</h3>
-                <p className="bio">
-                    Just a dude from Pennsylvania who likes to code and eat Chocolate.  It is Palmer Chocolate Country up here you know!
-                </p>
-                <a href="https://www.linkedin.com/in/nathen-leonard/"><img src="../images/linkedin-icon.png" /></a>
-                <a href="https://github.com/nateleo91" ><img src="../images/github-mark.png" /></a>
-            </div>
+      <div className="container">
+        <div className="profileImg">
+          <img className="image" src={image_src} alt="profile picture" />
         </div>
-    )
-
+        <div className="profileTxt">
+          <h3>{name}</h3>
+          <p className="bio">{bio}</p>
+          <a href={linkedin}><img src="../images/linkedin-icon.png" alt="LinkedIn" /></a>
+          <a href={github}><img src="../images/github-mark.png" alt="GitHub" /></a>
+        </div>
+      </div>
+    );
 }
+  
+function Team() {
+    return (
+        <div>
+        {team.map((member) => (
+            <Person
+            key={member.name}
+            image_src={member.image_src}
+            name={member.name}
+            bio={member.bio}
+            linkedin={member.linkedin}
+            github={member.github}
+            />
+        ))}
+        </div>
+    );
+}
+  
+  export default Team;

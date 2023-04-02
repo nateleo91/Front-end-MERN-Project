@@ -1,29 +1,29 @@
 [
     {
-        "image_src": "../public/images/Nate_uniform.jpeg",
+        "image_src": "../images/Nate_uniform.jpeg",
         "name": "Nate Leonard",
-        "bio": "Just a dude from Pennsylvania who likes to code and eat Chocolate.  It is Palmer Chocolate Country up here you know!",
+        "bio": "Nate's a wicked techie.  Believes he joined the Dark Side by buying a Mac, but had too for coding.  He loves Linux.  When he's not at his desk he is exploring the great state of Pennsylvania.",
         "linkedin": "https://www.linkedin.com/in/nathen-leonard/",
         "github": "https://github.com/nateleo91"
     },
     {
-        "image_src": "../public/images/Nate_uniform.jpeg",
+        "image_src": "../images/jonny_pb.jpg",
         "name": "Jonny Grobstein",
-        "bio": "Jonny can always be seen with his Service Dog, Papa Bear.  He loves all things technology, cheese, travel, and food.  Him and his wife live near Austin, TX.",
+        "bio": "Jonny can always be seen with his Service Dog, Papa Bear.  He loves all things technology, cheese, travel, and food.  Jonny lives with his wife and Papa Bear near Austin, TX.",
         "linkedin": "https://www.linkedin.com/in/jonnygrobstein/",
         "github": "https://github.com/jonnygrobstein" 
     },
     {
-        "image_src": "../public/images/Nate_uniform.jpeg",
-        "name": "Nate Leonard",
-        "bio": "Just a dude from Pennsylvania who likes to code and eat Chocolate.  It is Palmer Chocolate Country up here you know!",
+        "image_src": "../images/SharnellGraham.png",
+        "name": "Sharnell Graham",
+        "bio": "When Sharnell isn't thinking up something to code, he can be found with his wife chasing their kids all around the State of Georgia.",
         "linkedin": "https://www.linkedin.com/in/sharnell-graham-627932262/",
         "github": "https://github.com/SharnellGraham" 
     },
     {
-        "image_src": "../public/images/Nate_uniform.jpeg",
-        "name": "Nate Leonard",
-        "bio": "Just a dude from Pennsylvania who likes to code and eat Chocolate.  It is Palmer Chocolate Country up here you know!",
+        "image_src": "../images/JosePadilla.jpeg",
+        "name": "Jose Padilla",
+        "bio": "Jose's favorite things are watching movies and eating great food! Especially SciFi movies and eating something new and interesting! Jose is married with 2 kids (his Pitbull and Frenchie) and they all live in Houston, TX.",
         "linkedin": "https://www.linkedin.com/in/jose-padilla-978ab5146/",
         "github": "https://github.com/JpadillaCoding" 
     }
