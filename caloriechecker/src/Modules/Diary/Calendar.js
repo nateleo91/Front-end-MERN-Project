@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
+import Mealtable from './Mealtable';
 import "react-datepicker/dist/react-datepicker.css";
 import "../../css/Calendar.css";
 
@@ -18,15 +19,16 @@ function FoodCalendar() {
   });
 
   return (
-    <div className="calendarBody" style={{textAlign: 'center'}}>
+    <div className="calendarBody">
   <h1>Your Food Diary For: {dateString}</h1>
+
   <div>
-    <label htmlFor="date" style={{ display: "inline-block" }}>
+    <label htmlFor="date">
      Date{" "}
-     
     </label>
+
    <DatePicker
-      style={{ textAlign: "center" }}  // NEW LINE
+       // NEW LINE
       id="date"
       selected={selectedDate}
       onChange={handleDateChange}
@@ -34,8 +36,12 @@ function FoodCalendar() {
       minDate={new Date("1900-01-01")}
       maxDate={new Date("2100-12-31")}
     />
+    </div>
 
-  </div>
+      <div className="mealTable">
+        <Mealtable />
+      </div>
+
 </div>
   );
 }

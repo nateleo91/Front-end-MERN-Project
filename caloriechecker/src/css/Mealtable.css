@@ -5,8 +5,10 @@
   border-collapse: collapse;
   width: 50%;
   margin: 50px auto;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
+}
+
+.mealTitle {
+  text-align: center;
 }
 
 th, td {

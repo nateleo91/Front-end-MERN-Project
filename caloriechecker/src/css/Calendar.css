@@ -1,44 +1,8 @@
-#content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    max-width: 90vw;
-    margin: 97px auto;
-  }
-  
-  .center {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+.calendarBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-  h1 {
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-
-  #date {
-    width: 150px;
-    padding: 5px 10px;
-    border-radius: 6px;
-    background-color: #f9f7f7;
-    color: #007bff;
-    text-align: center;
-    padding: 10px;
-    margin: 0 auto;
-    display: block;
-  }
-
-  #date::placeholder {
-    color: #ccc;
-    text-align: center;
-  }
-
-    .DatePicker {
-    text-align: center;
-    width: 250px;
-    margin: 100000 auto;
-    display: block;
-  }

@@ -80,7 +80,7 @@ class MealTable extends React.Component {
     let totals = this.calculateTotals();
     return (
       <div>
-        <h1>Meal Table</h1>
+        <h1 className="mealTitle">Meal Table</h1>
         
         {this.state.isOpen && <Popup onClose={() => this.setState({ isOpen: false })} />}
 
