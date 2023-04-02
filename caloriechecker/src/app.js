@@ -28,8 +28,7 @@ function App() {
       [e.target.name]: e.target.value
     })
   }
-  async function handleSignUp(e) {
-    e.preventDefault()
+  async function handleSignUp() {
     if(user.password === user.retypePassword){
       await axios.post("http://localhost:4000/users/signup", {
         //Change url on deployment
@@ -50,9 +49,8 @@ function App() {
     }
   }
 
-  async function handleLogIn(e) {
+  async function handleLogIn() {
 
-    e.preventDefault()
     await axios.post("http://localhost:4000/users/login",{
       //change url on deployment
       email: user.email,
