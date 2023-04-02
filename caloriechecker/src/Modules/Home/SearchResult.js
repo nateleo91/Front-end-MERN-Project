@@ -19,7 +19,8 @@ function SearchResult(props) {
   async function handleNutrition(event) {
 
     const foodId = event.target.attributes.value.value
-    let foodNutritionObject =  await axios.get( "http://localhost:4000/foods/" + foodId )
+    let foodNutritionObject =  await axios.get( "https://calorie-trakr.herokuapp.com/foods/" + foodId )
+    //changed url for deployment original is http://localhost:4000/ 
     convertIntObj(foodNutritionObject.data)
     setNutritionInfo(foodNutritionObject.data)
   }

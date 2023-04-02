@@ -7,7 +7,8 @@ function PopupResults(props) {
   async function handleAddFood(event) {
     const foodId = event.target.attributes.value.value;
     let foodNutritionObject = await axios.get(
-      "http://localhost:4000/foods/" + foodId
+      "https://calorie-trakr.herokuapp.com/foods/" + foodId
+      //changed url for deployment
     );
     console.log(foodNutritionObject.data);
   }
