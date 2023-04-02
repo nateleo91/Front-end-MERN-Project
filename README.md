@@ -23,8 +23,11 @@ From figuring out how to connect the two sides using authentication, to how use 
 Credits
 ------
 Jonny Grobstein - [GitHub](https://github.com/jonnygrobstein) [LinkedIn](https://www.linkedin.com/in/jonnygrobstein/)
+
 Jose Padilla - [GitHub](https://github.com/JpadillaCoding) (https://www.linkedin.com/in/jose-padilla-978ab5146/)
+
 Nate Leonard - [GitHub](https://github.com/nateleo91) (https://www.linkedin.com/in/nathen-leonard/)
+
 Sharnell Graham - [GitHub](https://github.com/SharnellGraham) (https://www.linkedin.com/in/sharnell-graham-627932262/)
 
 
