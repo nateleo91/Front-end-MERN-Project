@@ -12,6 +12,18 @@
     margin-bottom: 20px;
     text-align: center;
   }
+
+  .createForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    margin: 0 auto;
+    width: 40%;
+  }
+
   #name-input {
     border: 1px solid #ccc;
     padding: 8px;
@@ -31,17 +43,6 @@
     font-size: 14px;
     font-weight: bold;
     margin-right: 7px;
-  }
-  
-  .createForm {
-    display: grid;
-    grid-template-columns: 0.8fr 2fr;
-    gap: 10px;
-    align-items: center;
-    padding: 10px;
-    text-align: center;
-    margin: 0 auto;
-    width: 40%;
   }
   
   .submit {

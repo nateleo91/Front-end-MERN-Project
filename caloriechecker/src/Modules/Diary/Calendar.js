@@ -18,7 +18,7 @@ function FoodCalendar() {
   });
 
   return (
-    <div style={{textAlign: 'center'}}>
+    <div className="calendarBody" style={{textAlign: 'center'}}>
   <h1>Your Food Diary For: {dateString}</h1>
   <div>
     <label htmlFor="date" style={{ display: "inline-block" }}>

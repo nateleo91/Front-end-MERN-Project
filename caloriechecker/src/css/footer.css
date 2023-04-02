@@ -1,8 +1,9 @@
 footer {
   background-color: #D1E4F4;
-  position: static;
+  position: absolute;
   bottom: 0;
   width: 100%;
+  border-bottom: 1px solid #8f8b8b;
   }
   
   .footer-container {
@@ -12,6 +13,7 @@ footer {
     align-items: center;
     background-color: #D1E4F4;
     height: 50px;
+    border: 1px solid 
   }
   
   .buttons-container {
@@ -35,7 +37,7 @@ footer {
   }
 
   .link:hover {
-    font-size: 23px;
+    font-size: 19px;
   }
   
   .buttons-container:hover {

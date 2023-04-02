@@ -1,6 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
+#content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 90vw;
+    margin: 97px auto;
   }
   
   .center {

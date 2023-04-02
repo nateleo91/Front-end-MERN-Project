@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import SearchBar from './SearchBar';
 import SearchResult from './SearchResult';
 import axios from 'axios';
+import "../../css/Home.css";
 
 function NutritionFacts() {
 

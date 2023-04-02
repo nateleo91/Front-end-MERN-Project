@@ -56,10 +56,11 @@ function NutritionInput() {
 		<h2>Enter Nutritional Information</h2>
 
 		<form className="createForm">
-			<label htmlFor="name-input">Food name:</label>
+			<label id="createLabel" htmlFor="name-input">Food name:</label>
 				<input type="text" id="name-input" name="food_name" value={food_name} onChange={handleInputChange} />
 			<label htmlFor="calories-input">Calories:</label>
 				<input type="text" className="numInput" id="calories-input" name="calories" value={calories} onChange={handleInputChange} step="1" />
+
 			<label id="createLabel" htmlFor="total-fat-input">Total Fat (g):</label>
 				<input type="text" className="numInput" id="total-fat-input" name="totalFat" value={totalFat} onChange={handleInputChange} step="1" />
 			<label id="createLabel" htmlFor="saturated-input">Iron (%):</label>
@@ -82,6 +83,7 @@ function NutritionInput() {
 				<input type="text" className="numInput" id="sugars-input" name="sugar" value={sugar} onChange={handleInputChange} step="1" />
 			<label id="createLabel" htmlFor="protein-input">Protein (g):</label>
 				<input type="text" className="numInput" id="protein-input" name="protein" value={protein} onChange={handleInputChange} step="1" />
+				
 			<button className="submit" type="submit" onClick={handleSubmit}>Submit</button>
 			<button className="submit" type="submit" onClick={handleUpdate}>Update</button>
 		</form>

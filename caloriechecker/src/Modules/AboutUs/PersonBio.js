@@ -1,6 +1,6 @@
 import React from "react";
-import '../css/PersonBio.css'
-import People from '../Data/AboutUs.json'
+import '../../css/PersonBio.css'
+import People from '../../Data/AboutUs.json'
 
 const team = People
 

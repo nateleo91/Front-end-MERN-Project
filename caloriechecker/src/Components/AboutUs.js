@@ -1,8 +1,5 @@
 import React from 'react';
-import Header from '../Modules/Header';
-import Person from './PersonBio';
-import Footer from '../Modules/Footer';
-import "../css/AboutUs.css"
+import Person from '../Modules/AboutUs/PersonBio';
 
 function About() {
   return (
