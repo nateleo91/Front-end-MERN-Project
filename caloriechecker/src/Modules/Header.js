@@ -17,14 +17,16 @@ function Header(props) {
   const handleShowSignUpModal = () => { setShowSignUpModal(true); setShowLoginModal(false); }
   const handleCloseSignUpModal = () => setShowSignUpModal(false);
 
-  const handleSignInSubmit = (event) => {
-    event.preventDefault();
-    // Handle sign-in submission logic here
+  async function handleSignInSubmit(event) {
+    event.preventDefault()
+    await handleLogIn()
+    handleCloseLoginModal();
   };
 
-  const handleSignUpSubmit = (event) => {
+  async function handleSignUpSubmit(event) {
     event.preventDefault();
-    // Handle sign-up submission logic here
+    await handleSignUp()
+    handleCloseSignUpModal()
   };
 
   return (
@@ -58,7 +60,7 @@ function Header(props) {
               <Form.Control type="password" name="password" placeholder="Password" onChange={handleInput} />
             </Form.Group>
           <div className="loginButtons">
-            <Button className="sign" variant="primary" type="submit" onClick={() => {handleLogIn(); handleCloseLoginModal();}}>
+            <Button className="sign" variant="primary" type="submit" onClick={handleSignInSubmit}>
               Sign In
             </Button>
             <Button className="sign" variant="Secondary" type="button" onClick={handleShowSignUpModal}>
@@ -105,7 +107,7 @@ function Header(props) {
               <Form.Control type="lastName" name="user_lastname" placeholder="Last Name" onChange={handleInput} />
             </Form.Group>
 
-            <Button variant="primary" type="submit" onClick={() => {handleSignUp(); handleCloseSignUpModal();}}>
+            <Button variant="primary" type="submit" onClick={handleSignUpSubmit}>
               Create Account
             </Button>
             <Button variant="Secondary" type="button" onClick={handleShowLoginModal}>
