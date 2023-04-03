@@ -5,23 +5,12 @@ function SearchResult(props) {
 
   let setNutritionInfo = props.setNutritionInfo
   const searchResult = props.searchResult
-
-
-  function convertIntObj(obj) {
-    for( const key in obj) {
-      if(typeof obj[key] === 'string') {
-        obj[key] = parseInt(obj[key])
-      }
-    }
-    return obj
-  }
  
   async function handleNutrition(event) {
 
     const foodId = event.target.attributes.value.value
     let foodNutritionObject =  await axios.get( "https://calorie-trakr.herokuapp.com/foods/" + foodId )
     //changed url for deployment original is http://localhost:4000/ 
-    convertIntObj(foodNutritionObject.data)
     setNutritionInfo(foodNutritionObject.data)
   }
   
