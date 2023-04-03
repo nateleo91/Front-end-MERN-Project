@@ -123,7 +123,6 @@ function NutritionFacts() {
         </tbody>
       </table>
     </div>
-    <button> delete </button>
   </div>
   </div>
   );
