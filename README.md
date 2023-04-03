@@ -15,9 +15,7 @@ To run the app locally, follow these steps:
     git clone <repository-url>
     ```
 2. Navigate to the project directory:
-    ```
-    cd calorietrakr-frontend
-    ```
+  
 3. Install the required dependencies:
     ```
     npm install
