@@ -38,6 +38,7 @@ function Footer() {
               value={selectedLanguage}
               placeholder="language"
               onChange={handleLanguageChange}
+              menuPlacement="top"
             />
           </div>
         </div>
