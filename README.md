@@ -12,10 +12,12 @@ To run the app locally, follow these steps:
 
 1. Clone the repository:
     ```
-    git clone <repository-url>
+    git clone <https://github.com/nateleo91/Front-end-MERN-Project>
     ```
 2. Navigate to the project directory:
-  
+   ```
+   cd Front-end-MERN-Project/caloriechecker 
+   ```
 3. Install the required dependencies:
     ```
     npm install
