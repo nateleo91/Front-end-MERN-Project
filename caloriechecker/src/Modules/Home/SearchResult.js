@@ -26,6 +26,7 @@ function SearchResult(props) {
           ))}
         </div>
       )}
+      <button>block</button>
     </div>
   );
 }
