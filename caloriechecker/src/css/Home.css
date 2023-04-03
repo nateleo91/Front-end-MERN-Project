@@ -126,6 +126,9 @@
     background-color: #f5f5f5;
     overflow-y: scroll; /* enable vertical scrollbar if content exceeds height */
   }
+.resultBoxItem {
+  cursor: pointer;
+}
 
   .servings {
     font-size: 20px;
