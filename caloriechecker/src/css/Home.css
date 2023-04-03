@@ -27,8 +27,27 @@
   .nutritionTitle {
     grid-column: 1 / 3;
     font-size: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     text-align: center;
+  }
+  .selectedItem {
+    margin: 0px;
+    padding: 0px;
+    max-height: 50px;
+    width: 80%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: .9fr .1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "text button";
+  }
+  .selectedItem p {
+    grid-area: text;
+    overflow: scroll;
+  }
+  #delete-btn {
+    grid-area: button;
   }
 
   .inputSearch {
@@ -99,10 +118,6 @@
     height: 485px; /* set a fixed height to make the box larger */
   }
 
-  .selectedOption {
-    
-  }
-
 .resultBox {
     height: 465px; /* set a fixed height to make the box larger */
     overflow-y: scroll;
@@ -116,7 +131,7 @@
     font-size: 20px;
     margin-left: 85px;
     margin-right: 10px;
-    margin-top: 20px;
+    margin-top: 7px;
   }
   
   #number-input {
@@ -135,7 +150,7 @@
   
   .nutritionInfo {
     grid-column: 1 / 3;
-    margin-top: 20px;
+    margin-top: 0px;
     width: 500px;
     height: 585px;
   }
