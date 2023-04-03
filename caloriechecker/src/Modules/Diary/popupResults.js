@@ -1,16 +1,12 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React from 'react';
+import axios from 'axios';
 
 function PopupResults(props) {
-  const searchResult = props.searchResult;
+  const { searchResult, addFoodToMeal } = props;
 
   async function handleAddFood(event) {
     const foodId = event.target.attributes.value.value;
-    let foodNutritionObject = await axios.get(
-      "https://calorie-trakr.herokuapp.com/foods/" + foodId
-      //changed url for deployment
-    );
-    console.log(foodNutritionObject.data);
+    await addFoodToMeal(foodId);
   }
 
   return (
