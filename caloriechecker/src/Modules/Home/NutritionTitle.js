@@ -10,7 +10,6 @@ function NutritionFacts() {
   
   const [value, setValue] = useState(1);
   const [searchResult, setSearchResult] = useState([]);
-  let [selectedItemId, setselectedItemId] = useState("null");
   let [tempNutritionInfo, setTempNutritionInfo] = useState([{defaultState}])
   /*Temp is needed to be able to multiply nutrition values while retaining
     original values for the temp values to calculate from.
@@ -33,8 +32,19 @@ function NutritionFacts() {
       });
   };
 
+  const handleDeleteItem = async (e) => {
+    e.preventDefault()
+    const foodId = nutritionInfo._id
+    await axios.delete("https://calorie-trakr.herokuapp.com/foods/" + foodId)
+    .then((res) => {
+      console.log('deleted')
+    })
+
+  }
+
   useEffect(() => {
     const currentValue = value
+    console.log(nutritionInfo)
     if(currentValue >= 1){
       //Above needed or the nutrition table will zero out if user puts 0 <
       setTempNutritionInfo(() => {
@@ -47,6 +57,7 @@ function NutritionFacts() {
     }
     else {
       setTempNutritionInfo(nutritionInfo)
+      //defaults the nutrition value back to original values 
     }
   }, [nutritionInfo,value])
 
@@ -55,7 +66,6 @@ function NutritionFacts() {
       <div className="left">
         <SearchBar handleSearchQuery={handleSearchQuery} />
         <SearchResult searchResult={searchResult} setNutritionInfo={setNutritionInfo}/>
-        <Button variant="primary" type="submit" onClick={selectedItemId} >Delete</Button>
       </div>
       
     <div className="right">
@@ -70,6 +80,10 @@ function NutritionFacts() {
           value={value}
           onChange={handleInputChange}
         />
+        <div>
+          <h3>{`${nutritionInfo.food_name || "Nothing Selected"}`}</h3>
+          <Button variant="primary" type="submit" onClick={handleDeleteItem} >Delete</Button>
+        </div>
 
         <div className="nutritionInfo">
             <table className="nutInfo">
