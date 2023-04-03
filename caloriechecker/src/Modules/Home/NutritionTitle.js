@@ -10,7 +10,6 @@ function NutritionFacts() {
   
   const [value, setValue] = useState(1);
   const [searchResult, setSearchResult] = useState([]);
-  let [selectedItemId, setselectedItemId] = useState("null");
   let [tempNutritionInfo, setTempNutritionInfo] = useState([{defaultState}])
   /*Temp is needed to be able to multiply nutrition values while retaining
     original values for the temp values to calculate from.
@@ -67,7 +66,6 @@ function NutritionFacts() {
       <div className="left">
         <SearchBar handleSearchQuery={handleSearchQuery} />
         <SearchResult searchResult={searchResult} setNutritionInfo={setNutritionInfo}/>
-        <Button variant="primary" type="submit" onClick={selectedItemId} >Delete</Button>
       </div>
       
     <div className="right">
