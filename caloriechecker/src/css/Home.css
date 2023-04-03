@@ -2,7 +2,9 @@
   border: 1px solid red;
 } */
   
-  
+  .home {
+    height: 100vh;
+  }
 
   #content {
     display: flex;
