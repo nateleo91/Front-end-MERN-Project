@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
-import MealTable from "./MealTable.js";
+import MealTable from "./Mealtable.js";
 import "react-datepicker/dist/react-datepicker.css";
 import "../../css/Calendar.css";
 

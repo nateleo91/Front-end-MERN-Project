@@ -33,6 +33,7 @@ function Header(props) {
     <div className="headerButtons">
       <div className="title">
         <a href='/' className="link"> <h1 className="name">CalorieTrakr</h1> </a>
+        {/* <a href='/' className="link"> <img className="logo" src='../../public/logo.png' /> </a> */}
       </div>
       <div className="button-group">
         <a className="headerTabs" href='/diary'> Diary </a>

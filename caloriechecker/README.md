@@ -1,0 +1,1 @@
+# Detailed README can be found in /caloriechecker
