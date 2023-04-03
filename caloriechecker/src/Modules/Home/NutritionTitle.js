@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SearchBar from './SearchBar';
 import SearchResult from './SearchResult';
+import { Button } from 'react-bootstrap';
 import axios from 'axios';
 import "../../css/Home.css";
 
@@ -31,8 +32,19 @@ function NutritionFacts() {
       });
   };
 
+  const handleDeleteItem = async (e) => {
+    e.preventDefault()
+    const foodId = nutritionInfo._id
+    await axios.delete("https://calorie-trakr.herokuapp.com/foods/" + foodId)
+    .then((res) => {
+      console.log('deleted')
+    })
+
+  }
+
   useEffect(() => {
     const currentValue = value
+    console.log(nutritionInfo)
     if(currentValue >= 1){
       //Above needed or the nutrition table will zero out if user puts 0 <
       setTempNutritionInfo(() => {
@@ -45,6 +57,7 @@ function NutritionFacts() {
     }
     else {
       setTempNutritionInfo(nutritionInfo)
+      //defaults the nutrition value back to original values 
     }
   }, [nutritionInfo,value])
 
@@ -67,6 +80,10 @@ function NutritionFacts() {
           value={value}
           onChange={handleInputChange}
         />
+        <div>
+          <h3>{`${nutritionInfo.food_name || "Nothing Selected"}`}</h3>
+          <Button variant="primary" type="submit" onClick={handleDeleteItem} >Delete</Button>
+        </div>
 
         <div className="nutritionInfo">
             <table className="nutInfo">
