@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
-import Mealtable from './Mealtable';
+import MealTable from "./MealTable";
 import "react-datepicker/dist/react-datepicker.css";
 import "../../css/Calendar.css";
 
@@ -39,7 +39,7 @@ function FoodCalendar() {
     </div>
 
       <div className="mealTable">
-        <Mealtable />
+        <MealTable />
       </div>
 
 </div>

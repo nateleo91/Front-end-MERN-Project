@@ -63,7 +63,7 @@ function Header(props) {
             <Button className="sign" variant="primary" type="submit" onClick={handleSignInSubmit}>
               Sign In
             </Button>
-            <Button className="sign" variant="Secondary" type="button" onClick={handleShowSignUpModal}>
+            <Button className="sign" variant="primary" type="button" onClick={handleShowSignUpModal}>
               Sign Up
             </Button>
           </div>
@@ -110,7 +110,7 @@ function Header(props) {
             <Button variant="primary" type="submit" onClick={handleSignUpSubmit}>
               Create Account
             </Button>
-            <Button variant="Secondary" type="button" onClick={handleShowLoginModal}>
+            <Button variant="primary" type="button" onClick={handleShowLoginModal}>
               SignIn
             </Button>
           </Form>

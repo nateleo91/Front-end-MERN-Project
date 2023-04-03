@@ -24,6 +24,7 @@ function SearchResult(props) {
     convertIntObj(foodNutritionObject.data)
     setNutritionInfo(foodNutritionObject.data)
   }
+  
   return (
     <div className="searchResult">
       {searchResult.data && (
