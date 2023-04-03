@@ -3,7 +3,7 @@ import NutritionInput from '../Modules/Create/NutritionInput'
 
 function Create() {
   return (
-    <div>
+    <div className='createPage'>
       <NutritionInput />
     </div>
   );

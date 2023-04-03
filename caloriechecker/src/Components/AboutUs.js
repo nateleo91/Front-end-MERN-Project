@@ -3,7 +3,7 @@ import Person from '../Modules/AboutUs/PersonBio';
 
 function About() {
   return (
-    <div>
+    <div className='aboutUsHome'>
       <Person />
     </div>
   );

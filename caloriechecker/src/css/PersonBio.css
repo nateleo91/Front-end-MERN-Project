@@ -1,4 +1,7 @@
 
+.aboutUsHome {
+    height: 100vh;
+}
 
 .container {
     display: flex;

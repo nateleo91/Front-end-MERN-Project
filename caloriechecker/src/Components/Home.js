@@ -6,7 +6,7 @@ function Home() {
 
   return (
 
-    <div>
+    <div className="home">
       <NutritionTitle />
     </div>
   );
