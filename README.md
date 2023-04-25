@@ -1,12 +1,14 @@
 # CalorieTrakr - Frontend
 
-This is the frontend for our CalorieTrakr App, developed using React, Axios, and date-fns.
+This is the front-end for our CalorieTrakr App, developed using React, Axios, and date-fns. Check out the back-end repo [HERE](https://github.com/JpadillaCoding/calorie-MERN-project-back)
 
 ## Description
 
-The CalorieTrakr App was designed to be a simple and effective calorie tracking app that allows users to track their daily food intake and monitor their progress towards their fitness goals.
+The CalorieTrakr App was designed to be a simple and effective calorie-tracking app that allows users to track their daily food intake and monitor their progress toward their fitness goals. 
 
 ## Installation
+
+Check out our deployed app on Netlify: [CalorieTrakr](https://aesthetic-raindrop-2c9eee.netlify.app/)
 
 To run the app locally, follow these steps:
 
@@ -43,7 +45,7 @@ The CalorieTrakr app provides the following features:
 
 ## Challenges Faced
 
-Challenges to building the frontend were largely due to data movement, using of state, and saving to the database. The Diary gave us the most challenges as it had multiple moving parts and was basically all the technicality of the main page with its search, with added functionality of having to input the data into a table, and tie it to another collection. Authentication was also a challenge, but we were able to overcome it with the help of a third-party library.
+Challenges to building the front-end were largely due to data movement, using of state, and saving to the database. The Diary gave us the most challenges as it had multiple moving parts and was all the technicality of the main page with its search, with the added functionality of having to input the data into a table and tie it to another collection. Authentication was also a challenge, but we were able to overcome it with the help of a third-party library.
 
 ## Contributors
 
