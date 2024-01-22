@@ -6,7 +6,7 @@ import axios from "axios";
 import "../../css/Home.css";
 
 function NutritionFacts() {
-  const [value, setValue] = useState(1);
+  const [servings, setServings] = useState(1);
   const [searchResult, setSearchResult] = useState([]);
   let [tempNutritionInfo, setTempNutritionInfo] = useState([{ defaultState }]);
   /*Temp is needed to be able to multiply nutrition values while retaining
@@ -15,7 +15,7 @@ function NutritionFacts() {
   let [nutritionInfo, setNutritionInfo] = useState([{ defaultState }]);
 
   function handleInputChange(event) {
-    setValue(event.target.value);
+    setServings(event.target.value);
   }
 
   const handleSearchQuery = async (searchText) => {
@@ -44,14 +44,14 @@ function NutritionFacts() {
   };
 
   useEffect(() => {
-    const currentValue = value;
+    const currentValue = servings;
     console.log(nutritionInfo);
     if (currentValue >= 1) {
       //Above needed or the nutrition table will zero out if user puts 0 <
       setTempNutritionInfo(() => {
         const multipliedNutritionFacts = {};
         for (const [key, nutritionValue] of Object.entries(nutritionInfo)) {
-          multipliedNutritionFacts[key] = nutritionValue * value;
+          multipliedNutritionFacts[key] = Math.round((nutritionValue * servings)*100) / 100;
         }
         return multipliedNutritionFacts;
       });
@@ -59,7 +59,7 @@ function NutritionFacts() {
       setTempNutritionInfo(nutritionInfo);
       //defaults the nutrition value back to original values
     }
-  }, [nutritionInfo, value]);
+  }, [nutritionInfo, servings]);
 
   return (
     <div id="content">
@@ -86,7 +86,7 @@ function NutritionFacts() {
           type="number"
           step="0.25"
           id="number-input"
-          value={value}
+          value={servings}
           onChange={handleInputChange}
         />
         <button
