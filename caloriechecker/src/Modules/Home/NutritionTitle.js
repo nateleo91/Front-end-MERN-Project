@@ -74,14 +74,9 @@ function NutritionFacts() {
       <div className="right">
         <h2 className="nutritionTitle">Nutrition Facts</h2>
         <div className="selectedItem">
-          <p>{`${nutritionInfo.food_name || "Nothing Selected"}`}</p>
-          <button
-            onClick={handleDeleteItem}
-            id="delete-btn"
-            className="searchButton"
-          >
-            Delete
-          </button>
+          <p className="selectedItemTitle">{`${
+            nutritionInfo.food_name || "Nothing Food Item Selected"
+          }`}</p>
         </div>
         <label htmlFor="number-input" className="servings">
           Servings:
@@ -94,7 +89,13 @@ function NutritionFacts() {
           value={value}
           onChange={handleInputChange}
         />
-
+        <button
+          onClick={handleDeleteItem}
+          id="delete-btn"
+          className="searchButton"
+        >
+          Delete
+        </button>
         <div className="nutritionInfo">
           <table className="nutInfo">
             <tbody>

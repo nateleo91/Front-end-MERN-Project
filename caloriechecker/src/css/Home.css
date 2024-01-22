@@ -35,21 +35,15 @@
   .selectedItem {
     margin: 0px;
     padding: 0px;
-    max-height: 50px;
-    width: 80%;
+    height: 70px;
     text-align: center;
-    display: grid;
-    grid-template-columns: .9fr .1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "text button";
+    display: flex;
+    justify-content: center;
   }
-  .selectedItem p {
+  .selectedItemTitle {
     grid-area: text;
+    width: 340px;
     overflow: scroll;
-  }
-  #delete-btn {
-    grid-area: button;
   }
 
   .inputSearch {
@@ -143,6 +137,7 @@
     height: 30px;
     font-size: 16px;
     margin-left: 5px;
+    margin-right: 80px;
   }
   
   #dropdown-menu {
