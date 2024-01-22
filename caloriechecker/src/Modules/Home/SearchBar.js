@@ -14,7 +14,7 @@ function SearchBar({ handleSearchQuery }) {
 
   return (
     <div className="searchBar">
-      <h6>Search food database by name:</h6>
+      <h6>Search food database:</h6>
         <div className="inputSearch">
           <input type="text" className="searchFor" value={searchText} onChange={handleSearchTextChange} />
           <button onClick={handleSearchButtonClick} className="searchButton">Search</button>
