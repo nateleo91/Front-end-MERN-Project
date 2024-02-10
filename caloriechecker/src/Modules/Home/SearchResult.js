@@ -20,7 +20,7 @@ function SearchResult(props) {
         <div className="resultBox">
           {
           searchResult.data.map((food) => (
-            <div key={food._id}>
+            <div key={food._id} className="resultBoxItem">
               <p value={food._id} onClick={event => handleNutrition(event)}>{food.food_name}</p>
             </div>
           ))}

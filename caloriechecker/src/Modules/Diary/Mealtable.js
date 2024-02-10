@@ -79,9 +79,8 @@ function MealTable() {
   }
 
   return (
-    <div>
+    <div className='mealTableMain'>
       <h1 className="mealTitle">Meal Table</h1>
-      {isOpen && <Popup onClose={() => setIsOpen(false)} addFoodToMeal={addFoodToMeal} />}
       <table className= "mealTable">
         <thead>
           <tr>
@@ -118,6 +117,7 @@ function MealTable() {
            </tr>
          </tbody>
        </table>
+       {isOpen && <Popup onClose={() => setIsOpen(false)} addFoodToMeal={addFoodToMeal} />}
      </div>
    );
 }
