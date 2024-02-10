@@ -33,3 +33,7 @@ th {
   color: white;
   padding: 10px 30px;
 }
+
+.mealTypeTitle th {
+  text-align: center;
+}
