@@ -18,6 +18,7 @@ td {
   text-align: left;
   padding: 10px;
   min-width: 20px;
+  text-align: center;
 }
 
 tr:nth-child(odd) {
@@ -34,6 +35,3 @@ th {
   padding: 10px 30px;
 }
 
-.mealTypeTitle th {
-  text-align: center;
-}

@@ -89,7 +89,7 @@ function MealTable() {
       <h1 className="mealTitle">Meal Table</h1>
       <table className="mealTable">
         <thead>
-          <tr className="mealTypeTitle">
+          <tr>
             <th>Meal Type</th>
             <th>Calories (kcal)</th>
             <th>Carbs (g)</th>
