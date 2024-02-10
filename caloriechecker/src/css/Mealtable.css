@@ -1,11 +1,11 @@
-.mealTableMain{
+.mealTableMain {
   height: 100vh;
 }
 
 .mealTable {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   border-collapse: collapse;
-  width: 50%;
+  width: 80%;
   margin: 50px auto;
 }
 
@@ -13,9 +13,11 @@
   text-align: center;
 }
 
-th, td {
+th,
+td {
   text-align: left;
-  padding: 8px;
+  padding: 10px;
+  min-width: 20px;
 }
 
 tr:nth-child(odd) {
@@ -29,5 +31,5 @@ tr:hover {
 th {
   background-color: #007bff;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 30px;
 }

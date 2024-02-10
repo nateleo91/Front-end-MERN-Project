@@ -75,7 +75,7 @@ function NutritionFacts() {
         <h2 className="nutritionTitle">Nutrition Facts</h2>
         <div className="selectedItem">
           <p className="selectedItemTitle">{`${
-            nutritionInfo.food_name || "Nothing Food Item Selected"
+            nutritionInfo.food_name || "No Food Item Selected"
           }`}</p>
         </div>
         <label htmlFor="number-input" className="servings">
